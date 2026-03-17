@@ -1,8 +1,8 @@
 # Detalles del curso {.unnumbered}
 
-Curso: Probabilidad I
-Siglas: EPG4101
-Profesor: Johan Van Der Molen (jvandermolen@uc.cl)
+Curso: Probabilidad I  
+Siglas: EPG4101  
+Profesor: Johan Van Der Molen (jvandermolen@uc.cl)  
 
 ## Bibliografía
 - Mínima:

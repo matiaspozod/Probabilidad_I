@@ -2,11 +2,11 @@
 
 Existen distintas problemáticas o situaciones en el análisis de datos, sin embargo, es posible generar preguntas generales para cualquier problema que se presente:
 
-¿Como abordar el problema?
-¿Existe una mejora real al aplicar un determinado factor en relación a uno existente o basal?
-¿Existe un cambio real del fenómeno actualmente observado, en relación a lo previamente conocido del fenómeno? (Considerando información previa y contrastandola con información actual que en un primer comienzo parece ser distinta a la habitual)
-¿Existe una anomalía?
-¿El tratamoento es realmente efectivo?
+- ¿Como abordar el problema?
+- ¿Existe una mejora real al aplicar un determinado factor en relación a uno existente o basal?
+- ¿Existe un cambio real del fenómeno actualmente observado, en relación a lo previamente conocido del fenómeno? (Considerando información previa y contrastandola con información actual que en un primer comienzo parece ser distinta a la habitual)
+- ¿Existe una anomalía?
+- ¿El tratamiento es realmente efectivo
 
 Todas estas preguntas conducen a si existe un real cambio, efecto, mejora, disminución, anomalía... Todas estas interpretaciones se condensan en si existe o no una diferencia real.
 
@@ -30,3 +30,9 @@ La teoría de la probabilidad es el **lenguaje matemático de la incertidumbre**
 - Cuantificar incertidumbre
 - Entender la variabilidad en los datos
 - Evaluar si un resultado observado es compatible con un modelo
+
+:::{.callout-note}
+Pude darme cuenta que es necesario preguntarse ¿Los grupos son comparables? esto conlleva a pensar si la comparación es justa. En este sentido, justa se refiere a que si es posible afirmar que lo observado es solo atribuible al factor estudiado o no a otros factores que podrián estar afectando a la variable de interes. Esto da cuenta entonces de la necesidad de abordar un problema de manera en que sea posible recabar información de variables importantes del problema y que esas variables sean homogeneas en los grupos a comparar, esto asegura que la comparación es justa, que no se diferencian por otros factores, si no que solo existe una diferencia entre ellos solo en la variable o variables que se busca estudiar y evaluar.
+:::
+
+fdfdf

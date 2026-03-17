@@ -2,11 +2,11 @@
   {
     "objectID": "intro.html",
     "href": "intro.html",
-    "title": "1  Introduction",
+    "title": "2  Introduction",
     "section": "",
     "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
     ]
   },
   {
@@ -14,9 +14,9 @@
     "href": "index.html",
     "title": "Probabilidad I",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2",
+    "text": "Detalles del curso\nCurso: Probabilidad I\nSiglas: EPG4101\nProfesor: Johan Van Der Molen (jvandermolen@uc.cl)",
     "crumbs": [
-      "Preface"
+      "Detalles del curso"
     ]
   },
   {
@@ -37,6 +37,36 @@
     "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
     "crumbs": [
       "References"
+    ]
+  },
+  {
+    "objectID": "index.html#bibliografía",
+    "href": "index.html#bibliografía",
+    "title": "Probabilidad I",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nMínima:\n\nCasella, G. y Berger, R.L. (2002). Statistical inference (2a.ed.). Cengage Learning. Libro\n\nComplementaria:\n\nGut, A. (2009). An intermediate course in probability (2a.ed.) Springer. Libro\nRoss, S.M. (2023). Simulation (6a.ed.). Academic Press. Libro",
+    "crumbs": [
+      "Detalles del curso"
+    ]
+  },
+  {
+    "objectID": "clase_1.html",
+    "href": "clase_1.html",
+    "title": "1  Introducción",
+    "section": "",
+    "text": "1.1 Teoría de la Probabilidad\nExisten distintas problemáticas o situaciones en el análisis de datos, sin embargo, es posible generar preguntas generales para cualquier problema que se presente:\nTodas estas preguntas conducen a si existe un real cambio, efecto, mejora, disminución, anomalía… Todas estas interpretaciones se condensan en si existe o no una diferencia real.\nEn general, todos los problemas que enfrentaremos tienen algo en común, y es que en todos vamos a necesitar observar datos y preguntarnos:\nPara responder necesitamos lo siguiente:\nPara poder responder las preguntas que surjan de un problema o situación en estudio, necesitamos la teoría de probabilidad, la cual nos entrega las bases matemáticas para abordarlas.\nLa teoría de la probabilidad es el lenguaje matemático de la incertidumbre y forman la base matemática de la inferencia estadística y la ciencia de datos. Con la teoría de la probabilidad es posible:\nfdfdf",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción</span>"
+    ]
+  },
+  {
+    "objectID": "clase_1.html#teoría-de-la-probabilidad",
+    "href": "clase_1.html#teoría-de-la-probabilidad",
+    "title": "1  Introducción",
+    "section": "",
+    "text": "Modelar fenómenos aleatorios\nCuantificar incertidumbre\nEntender la variabilidad en los datos\nEvaluar si un resultado observado es compatible con un modelo\n\n\n\n\n\n\n\nNote\n\n\n\nPude darme cuenta que es necesario preguntarse ¿Los grupos son comparables? esto conlleva a pensar si la comparación es justa. En este sentido, justa se refiere a que si es posible afirmar que lo observado es solo atribuible al factor estudiado o no a otros factores que podrián estar afectando a la variable de interes. Esto da cuenta entonces de la necesidad de abordar un problema de manera en que sea posible recabar información de variables importantes del problema y que esas variables sean homogeneas en los grupos a comparar, esto asegura que la comparación es justa, que no se diferencian por otros factores, si no que solo existe una diferencia entre ellos solo en la variable o variables que se busca estudiar y evaluar.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción</span>"
     ]
   }
 ]
