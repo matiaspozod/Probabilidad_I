@@ -1,0 +1,32 @@
+# Introducción
+
+Existen distintas problemáticas o situaciones en el análisis de datos, sin embargo, es posible generar preguntas generales para cualquier problema que se presente:
+
+¿Como abordar el problema?
+¿Existe una mejora real al aplicar un determinado factor en relación a uno existente o basal?
+¿Existe un cambio real del fenómeno actualmente observado, en relación a lo previamente conocido del fenómeno? (Considerando información previa y contrastandola con información actual que en un primer comienzo parece ser distinta a la habitual)
+¿Existe una anomalía?
+¿El tratamoento es realmente efectivo?
+
+Todas estas preguntas conducen a si existe un real cambio, efecto, mejora, disminución, anomalía... Todas estas interpretaciones se condensan en si existe o no una diferencia real.
+
+En general, todos los problemas que enfrentaremos tienen algo en común, y es que en todos vamos a necesitar observar datos y preguntarnos:
+
+> ¿El resultado obtenido fue producto solo del azar o existe realmente un fenómeno (natural o artificial) subyacente que explica los datos observados?
+
+Para responder necesitamos lo siguiente:
+
+- Un **modelo** para describir la variabilidad de los datos.
+- Una manera de **cuantificar** que los resultados observados son plausibles.
+- Una medida de **cuán sorprendente o raro** es lo observado.
+
+## Teoría de la Probabilidad
+
+Para poder responder las preguntas que surjan de un problema o situación en estudio, necesitamos la teoría de probabilidad, la cual nos entrega las bases matemáticas para abordarlas.
+
+La teoría de la probabilidad es el **lenguaje matemático de la incertidumbre** y forman la base matemática de la inferencia estadística y la ciencia de datos. Con la teoría de la probabilidad es posible:
+
+- Modelar fenómenos aleatorios
+- Cuantificar incertidumbre
+- Entender la variabilidad en los datos
+- Evaluar si un resultado observado es compatible con un modelo
