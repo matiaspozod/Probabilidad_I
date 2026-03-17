@@ -1,0 +1,11 @@
+# Probabilidad I
+
+- **Profesor:** Johan Van Der Molen Moris
+- 
+
+## Bibliografía
+- Mínima:
+    * Casella, G. y Berger, R.L. (2002). Statistical inference (2a.ed.). Cengage Learning. [Libro](https://drive.google.com/file/d/1ngxF_UTLxBLQcM0bQT6VJPwz60wVkMNV/view?usp=drive_link)
+- Complementaria:
+    * Gut, A. (2009). An intermediate course in probability (2a.ed.) Springer. [Libro](https://drive.google.com/file/d/1QGeVrche29-WJN6JnBbaT295UWwxnvF-/view?usp=drive_link)
+    * Ross, S.M. (2023). Simulation (6a.ed.). Academic Press. [Libro](https://drive.google.com/file/d/1ZG5jx-nEwqp8ssY_kc6HC-sW4qMfxbbj/view?usp=drive_link)
