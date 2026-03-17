@@ -1,15 +1,5 @@
 [
   {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "2  Introduction",
-    "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
-    ]
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Probabilidad I",
@@ -17,26 +7,6 @@
     "text": "Detalles del curso\nCurso: Probabilidad I\nSiglas: EPG4101\nProfesor: Johan Van Der Molen (jvandermolen@uc.cl)",
     "crumbs": [
       "Detalles del curso"
-    ]
-  },
-  {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "2  Summary",
-    "section": "",
-    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
-    ]
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
-    "crumbs": [
-      "References"
     ]
   },
   {
@@ -64,9 +34,39 @@
     "href": "clase_1.html#teoría-de-la-probabilidad",
     "title": "1  Introducción",
     "section": "",
-    "text": "Modelar fenómenos aleatorios\nCuantificar incertidumbre\nEntender la variabilidad en los datos\nEvaluar si un resultado observado es compatible con un modelo\n\n\n\n\n\n\n\nNote\n\n\n\nPude darme cuenta que es necesario preguntarse ¿Los grupos son comparables? esto conlleva a pensar si la comparación es justa. En este sentido, justa se refiere a que si es posible afirmar que lo observado es solo atribuible al factor estudiado o no a otros factores que podrián estar afectando a la variable de interes. Esto da cuenta entonces de la necesidad de abordar un problema de manera en que sea posible recabar información de variables importantes del problema y que esas variables sean homogeneas en los grupos a comparar, esto asegura que la comparación es justa, que no se diferencian por otros factores, si no que solo existe una diferencia entre ellos solo en la variable o variables que se busca estudiar y evaluar.",
+    "text": "Modelar fenómenos aleatorios\nCuantificar incertidumbre\nEntender la variabilidad en los datos\nEvaluar si un resultado observado es compatible con un modelo\n\n\n\n\n\n\n\nNotePensamiento importante\n\n\n\nPude darme cuenta que es necesario preguntarse ¿Los grupos son comparables? esto conlleva a pensar si la comparación es justa. En este sentido, justa se refiere a que si es posible afirmar que lo observado es solo atribuible al factor estudiado o no a otros factores que podrián estar afectando a la variable de interes. Esto da cuenta entonces de la necesidad de abordar un problema de manera en que sea posible recabar información de variables importantes del problema y que esas variables sean homogeneas en los grupos a comparar, esto asegura que la comparación es justa, que no se diferencian por otros factores, si no que solo existe una diferencia entre ellos solo en la variable o variables que se busca estudiar y evaluar.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "2  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "References"
     ]
   }
 ]

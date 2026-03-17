@@ -19,6 +19,7 @@ format:
     theme:
       - cosmo
       - brand
+    css: styles/styles.css
   pdf:
     documentclass: scrreprt
 

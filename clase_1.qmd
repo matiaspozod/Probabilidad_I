@@ -31,8 +31,8 @@ La teoría de la probabilidad es el **lenguaje matemático de la incertidumbre**
 - Entender la variabilidad en los datos
 - Evaluar si un resultado observado es compatible con un modelo
 
-:::{.callout-note}
+:::{.callout-note title="Pensamiento importante"}
 Pude darme cuenta que es necesario preguntarse ¿Los grupos son comparables? esto conlleva a pensar si la comparación es justa. En este sentido, justa se refiere a que si es posible afirmar que lo observado es solo atribuible al factor estudiado o no a otros factores que podrián estar afectando a la variable de interes. Esto da cuenta entonces de la necesidad de abordar un problema de manera en que sea posible recabar información de variables importantes del problema y que esas variables sean homogeneas en los grupos a comparar, esto asegura que la comparación es justa, que no se diferencian por otros factores, si no que solo existe una diferencia entre ellos solo en la variable o variables que se busca estudiar y evaluar.
 :::
 
-fdfdf
+
