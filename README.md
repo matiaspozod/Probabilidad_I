@@ -5,7 +5,7 @@
 
 ## Bibliografía
 - Mínima:
-    * Casella, G. y Berger, R.L. (2002). Statistical inference (2a.ed.).Cengage Learning.
+    * Casella, G. y Berger, R.L. (2002). Statistical inference (2a.ed.). Cengage Learning. [Libro](https://drive.google.com/file/d/1ngxF_UTLxBLQcM0bQT6VJPwz60wVkMNV/view?usp=drive_link)
 - Complementaria:
     * Gut, A. (2009). An intermediate course in probability (2a.ed.) Springer.
     * Ross, S.M. (2023). Simulation (6a.ed.). Academic Press.
