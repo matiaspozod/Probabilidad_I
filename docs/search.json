@@ -24,7 +24,7 @@
     "href": "clase_1.html",
     "title": "1  Introducción",
     "section": "",
-    "text": "1.1 Teoría de la Probabilidad\nExisten distintas problemáticas o situaciones en el análisis de datos, sin embargo, es posible generar preguntas generales para cualquier problema que se presente:\nTodas estas preguntas conducen a si existe un real cambio, efecto, mejora, disminución, anomalía… Todas estas interpretaciones se condensan en si existe o no una diferencia real.\nEn general, todos los problemas que enfrentaremos tienen algo en común, y es que en todos vamos a necesitar observar datos y preguntarnos:\nPara responder necesitamos lo siguiente:\nPara poder responder las preguntas que surjan de un problema o situación en estudio, necesitamos la teoría de probabilidad, la cual nos entrega las bases matemáticas para abordarlas.\nLa teoría de la probabilidad es el lenguaje matemático de la incertidumbre y forman la base matemática de la inferencia estadística y la ciencia de datos. Con la teoría de la probabilidad es posible:\nfdfdf",
+    "text": "1.1 Teoría de la Probabilidad\nExisten distintas problemáticas o situaciones en el análisis de datos, sin embargo, es posible generar preguntas generales para cualquier problema que se presente:\nTodas estas preguntas conducen a si existe un real cambio, efecto, mejora, disminución, anomalía… Todas estas interpretaciones se condensan en si existe o no una diferencia real.\nEn general, todos los problemas que enfrentaremos tienen algo en común, y es que en todos vamos a necesitar observar datos y preguntarnos:\nPara responder necesitamos lo siguiente:\nPara poder responder las preguntas que surjan de un problema o situación en estudio, necesitamos la teoría de probabilidad, la cual nos entrega las bases matemáticas para abordarlas.\nLa teoría de la probabilidad es el lenguaje matemático de la incertidumbre y forman la base matemática de la inferencia estadística y la ciencia de datos. Con la teoría de la probabilidad es posible:\nUn aspecto muy importante es la elección de la distribución que se utilizará para modelar el fenómeno aleatorio, ya que cada distribución viene acompañada de supuestos que debemos considerar a la hora de modelar el fenómeno.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción</span>"
     ]
@@ -34,7 +34,7 @@
     "href": "clase_1.html#teoría-de-la-probabilidad",
     "title": "1  Introducción",
     "section": "",
-    "text": "Modelar fenómenos aleatorios\nCuantificar incertidumbre\nEntender la variabilidad en los datos\nEvaluar si un resultado observado es compatible con un modelo\n\n\n\n\n\n\n\nNotePensamiento importante\n\n\n\nPude darme cuenta que es necesario preguntarse ¿Los grupos son comparables? esto conlleva a pensar si la comparación es justa. En este sentido, justa se refiere a que si es posible afirmar que lo observado es solo atribuible al factor estudiado o no a otros factores que podrián estar afectando a la variable de interes. Esto da cuenta entonces de la necesidad de abordar un problema de manera en que sea posible recabar información de variables importantes del problema y que esas variables sean homogeneas en los grupos a comparar, esto asegura que la comparación es justa, que no se diferencian por otros factores, si no que solo existe una diferencia entre ellos solo en la variable o variables que se busca estudiar y evaluar.",
+    "text": "Modelar fenómenos aleatorios\nCuantificar incertidumbre. ¿Que tan seguros estamos de nuestra conclusión?\nEntender la variabilidad en los datos\nEvaluar si un resultado observado es compatible con un modelo\n\n\n\n\n\n\n\nNotePensamiento importante\n\n\n\nPude darme cuenta que es necesario preguntarse ¿Los grupos son comparables? esto conlleva a pensar si la comparación es justa. En este sentido, justa se refiere a que si es posible afirmar que lo observado es atribuible solo al factor estudiado o no a otros factores que podrián estar afectando a la variable de interes. Esto da cuenta entonces de la necesidad de abordar un problema de manera en que sea posible recabar información de variables importantes del problema y que esas variables sean homogeneas en los grupos a comparar, esto asegura que la comparación sea justa, que no se diferencien por otros factores, y que entre ellos solo exista una diferencia en la variable o variables que se busca estudiar y evaluar.\n\n\n\n\n\n\n\n\n\nImportantModelos, supuestos y simplificación\n\n\n\nPor lo tanto, como estadísticos proponemos un modelo matemático, el cual intenta explicar un fenómeno. Dicho modelo siempre sera una simplifiación del fenómeno, y cada supuesto expuesto suscribe simplificación.\nPor otro lado, es importante no caer en la sobresimplificación. Esto se evita considerando los factores importantes del fenómeno que explican en gran medida su variabilidad.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción</span>"
     ]
@@ -67,6 +67,16 @@
     "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
     "crumbs": [
       "References"
+    ]
+  },
+  {
+    "objectID": "clase_1.html#historia-de-la-probabilidad",
+    "href": "clase_1.html#historia-de-la-probabilidad",
+    "title": "1  Introducción",
+    "section": "1.2 Historia de la probabilidad",
+    "text": "1.2 Historia de la probabilidad\nLos sumerios tenian juegos de azar. Ellos tenian un protodado, el cual consistia en una especie de dado construido a partir de hueso de animal marcado.\nDe hecho, la palabra azar proviene del árabe y significa flor, dado que en esa época tallaban una flor en la cara que deseaban marcar.\nAsí, el origen de la teoría de la probabilidad está en los juegos de azar.\nEn 1654, Chevalier de Méré comenzó a plantear interrogantes acerca de cómo calcular probabilidades justas en los juegos de azar.\nLuego, entre Blaise Pascal y Pierre de Fermat comenzaron a analizar y desarrollar la teoría moderna de la probabilidad.\nEl famoso problema de los puntos dio el punto de partida en como abordar un problema, en el cual está presente el azar. Aquí Pascal y Fermar propucieron distintas vías de resolución y ambas llegaron al mismo resultado.\n\n\n\n\n\n\nTipProblema de los puntos\n\n\n\nDos jugadores apuestan dinero a un juego de azar (ej. lanzar una moneda) con 5 rondas. El primero que gane 3 rondas se lleva todo el premio. Sin embargo, el juego se interrumpe cuando el Jugador A ha ganado 2 rondas y el Jugador B ha ganado 1. ¿como dividir la apuesta justamente si el juego se detiene antes de finalizar?",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción</span>"
     ]
   }
 ]

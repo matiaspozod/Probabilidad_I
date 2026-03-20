@@ -6,7 +6,7 @@ Existen distintas problemáticas o situaciones en el análisis de datos, sin emb
 - ¿Existe una mejora real al aplicar un determinado factor en relación a uno existente o basal?
 - ¿Existe un cambio real del fenómeno actualmente observado, en relación a lo previamente conocido del fenómeno? (Considerando información previa y contrastandola con información actual que en un primer comienzo parece ser distinta a la habitual)
 - ¿Existe una anomalía?
-- ¿El tratamiento es realmente efectivo
+- ¿El tratamiento es realmente efectivo?
 
 Todas estas preguntas conducen a si existe un real cambio, efecto, mejora, disminución, anomalía... Todas estas interpretaciones se condensan en si existe o no una diferencia real.
 
@@ -16,7 +16,7 @@ En general, todos los problemas que enfrentaremos tienen algo en común, y es qu
 
 Para responder necesitamos lo siguiente:
 
-- Un **modelo** para describir la variabilidad de los datos.
+- Definir un **modelo** para describir la variabilidad de los datos.
 - Una manera de **cuantificar** que los resultados observados son plausibles.
 - Una medida de **cuán sorprendente o raro** es lo observado.
 
@@ -27,12 +27,36 @@ Para poder responder las preguntas que surjan de un problema o situación en est
 La teoría de la probabilidad es el **lenguaje matemático de la incertidumbre** y forman la base matemática de la inferencia estadística y la ciencia de datos. Con la teoría de la probabilidad es posible:
 
 - Modelar fenómenos aleatorios
-- Cuantificar incertidumbre
+- Cuantificar incertidumbre. ¿Que tan seguros estamos de nuestra conclusión?
 - Entender la variabilidad en los datos
-- Evaluar si un resultado observado es compatible con un modelo
+- **Evaluar si un resultado observado es compatible con un modelo**
 
 :::{.callout-note title="Pensamiento importante"}
-Pude darme cuenta que es necesario preguntarse ¿Los grupos son comparables? esto conlleva a pensar si la comparación es justa. En este sentido, justa se refiere a que si es posible afirmar que lo observado es solo atribuible al factor estudiado o no a otros factores que podrián estar afectando a la variable de interes. Esto da cuenta entonces de la necesidad de abordar un problema de manera en que sea posible recabar información de variables importantes del problema y que esas variables sean homogeneas en los grupos a comparar, esto asegura que la comparación es justa, que no se diferencian por otros factores, si no que solo existe una diferencia entre ellos solo en la variable o variables que se busca estudiar y evaluar.
+Pude darme cuenta que es necesario preguntarse ¿Los grupos son comparables? esto conlleva a pensar si la **comparación es justa**. En este sentido, justa se refiere a que si es posible afirmar que lo observado es **atribuible** solo al factor estudiado o no a otros factores que podrián estar afectando a la variable de interes. Esto da cuenta entonces de la necesidad de abordar un problema de manera en que sea posible recabar información de variables importantes del problema y que esas variables sean homogeneas en los grupos a comparar, esto asegura que la comparación sea justa, que no se diferencien por otros factores, y que entre ellos solo exista una diferencia en la variable o variables que se busca estudiar y evaluar.
 :::
 
+Un aspecto muy importante es la elección de la distribución que se utilizará para modelar el fenómeno aleatorio, ya que cada distribución viene acompañada de supuestos que debemos considerar a la hora de modelar el fenómeno.
 
+:::{.callout-important title= 'Modelos, supuestos y simplificación' icon=false}
+Por lo tanto, como estadísticos proponemos un modelo matemático, el cual intenta explicar un fenómeno. Dicho modelo siempre sera una simplifiación del fenómeno, y cada supuesto expuesto suscribe simplificación.
+
+Por otro lado, es importante no caer en la sobresimplificación. Esto se evita considerando los factores importantes del fenómeno que explican en gran medida su variabilidad.
+:::
+
+## Historia de la probabilidad
+
+Los sumerios tenian juegos de **azar**. Ellos tenian un protodado, el cual consistia en una especie de dado construido a partir de hueso de animal marcado.  
+De hecho, la palabra azar proviene del árabe y significa flor, dado que en esa época tallaban una flor en la cara que deseaban marcar.
+
+Así, el origen de la teoría de la probabilidad está en los juegos de azar.
+
+En 1654, **Chevalier de Méré** comenzó a plantear interrogantes acerca de cómo calcular probabilidades justas en los juegos de azar.
+
+Luego, entre **Blaise Pascal** y **Pierre de Fermat** comenzaron a analizar y desarrollar la teoría moderna de la probabilidad.
+
+El famoso **problema de los puntos** dio el punto de partida en como abordar un problema, en el cual está presente el azar. Aquí Pascal y Fermar propucieron distintas vías de resolución y ambas llegaron al mismo resultado.
+
+:::{.callout-tip title='Problema de los puntos'}
+Dos jugadores apuestan dinero a un juego de azar (ej. lanzar una moneda) con
+5 rondas. El primero que gane 3 rondas se lleva todo el premio. Sin embargo, el juego se interrumpe cuando el Jugador A ha ganado 2 rondas y el Jugador B ha ganado 1. **¿como dividir la apuesta justamente si el juego se detiene antes de finalizar?**
+:::

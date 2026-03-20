@@ -146,6 +146,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#teoría-de-la-probabilidad" id="toc-teoría-de-la-probabilidad" class="nav-link active" data-scroll-target="#teoría-de-la-probabilidad"><span class="header-section-number">1.1</span> Teoría de la Probabilidad</a></li>
+  <li><a href="#historia-de-la-probabilidad" id="toc-historia-de-la-probabilidad" class="nav-link" data-scroll-target="#historia-de-la-probabilidad"><span class="header-section-number">1.2</span> Historia de la probabilidad</a></li>
   </ul>
 </nav>
     </div>
@@ -177,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
 <li>¿Existe una mejora real al aplicar un determinado factor en relación a uno existente o basal?</li>
 <li>¿Existe un cambio real del fenómeno actualmente observado, en relación a lo previamente conocido del fenómeno? (Considerando información previa y contrastandola con información actual que en un primer comienzo parece ser distinta a la habitual)</li>
 <li>¿Existe una anomalía?</li>
-<li>¿El tratamiento es realmente efectivo</li>
+<li>¿El tratamiento es realmente efectivo?</li>
 </ul>
 <p>Todas estas preguntas conducen a si existe un real cambio, efecto, mejora, disminución, anomalía… Todas estas interpretaciones se condensan en si existe o no una diferencia real.</p>
 <p>En general, todos los problemas que enfrentaremos tienen algo en común, y es que en todos vamos a necesitar observar datos y preguntarnos:</p>
@@ -186,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 <p>Para responder necesitamos lo siguiente:</p>
 <ul>
-<li>Un <strong>modelo</strong> para describir la variabilidad de los datos.</li>
+<li>Definir un <strong>modelo</strong> para describir la variabilidad de los datos.</li>
 <li>Una manera de <strong>cuantificar</strong> que los resultados observados son plausibles.</li>
 <li>Una medida de <strong>cuán sorprendente o raro</strong> es lo observado.</li>
 </ul>
@@ -196,9 +197,9 @@ ul.task-list li input[type="checkbox"] {
 <p>La teoría de la probabilidad es el <strong>lenguaje matemático de la incertidumbre</strong> y forman la base matemática de la inferencia estadística y la ciencia de datos. Con la teoría de la probabilidad es posible:</p>
 <ul>
 <li>Modelar fenómenos aleatorios</li>
-<li>Cuantificar incertidumbre</li>
+<li>Cuantificar incertidumbre. ¿Que tan seguros estamos de nuestra conclusión?</li>
 <li>Entender la variabilidad en los datos</li>
-<li>Evaluar si un resultado observado es compatible con un modelo</li>
+<li><strong>Evaluar si un resultado observado es compatible con un modelo</strong></li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Pensamiento importante">
 <div class="callout-header d-flex align-content-center">
@@ -210,10 +211,46 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Pude darme cuenta que es necesario preguntarse ¿Los grupos son comparables? esto conlleva a pensar si la comparación es justa. En este sentido, justa se refiere a que si es posible afirmar que lo observado es solo atribuible al factor estudiado o no a otros factores que podrián estar afectando a la variable de interes. Esto da cuenta entonces de la necesidad de abordar un problema de manera en que sea posible recabar información de variables importantes del problema y que esas variables sean homogeneas en los grupos a comparar, esto asegura que la comparación es justa, que no se diferencian por otros factores, si no que solo existe una diferencia entre ellos solo en la variable o variables que se busca estudiar y evaluar.</p>
+<p>Pude darme cuenta que es necesario preguntarse ¿Los grupos son comparables? esto conlleva a pensar si la <strong>comparación es justa</strong>. En este sentido, justa se refiere a que si es posible afirmar que lo observado es <strong>atribuible</strong> solo al factor estudiado o no a otros factores que podrián estar afectando a la variable de interes. Esto da cuenta entonces de la necesidad de abordar un problema de manera en que sea posible recabar información de variables importantes del problema y que esas variables sean homogeneas en los grupos a comparar, esto asegura que la comparación sea justa, que no se diferencien por otros factores, y que entre ellos solo exista una diferencia en la variable o variables que se busca estudiar y evaluar.</p>
 </div>
 </div>
-<p>fdfdf</p>
+<p>Un aspecto muy importante es la elección de la distribución que se utilizará para modelar el fenómeno aleatorio, ya que cada distribución viene acompañada de supuestos que debemos considerar a la hora de modelar el fenómeno.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Modelos, supuestos y simplificación">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Modelos, supuestos y simplificación
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Por lo tanto, como estadísticos proponemos un modelo matemático, el cual intenta explicar un fenómeno. Dicho modelo siempre sera una simplifiación del fenómeno, y cada supuesto expuesto suscribe simplificación.</p>
+<p>Por otro lado, es importante no caer en la sobresimplificación. Esto se evita considerando los factores importantes del fenómeno que explican en gran medida su variabilidad.</p>
+</div>
+</div>
+</section>
+<section id="historia-de-la-probabilidad" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="historia-de-la-probabilidad"><span class="header-section-number">1.2</span> Historia de la probabilidad</h2>
+<p>Los sumerios tenian juegos de <strong>azar</strong>. Ellos tenian un protodado, el cual consistia en una especie de dado construido a partir de hueso de animal marcado.<br>
+De hecho, la palabra azar proviene del árabe y significa flor, dado que en esa época tallaban una flor en la cara que deseaban marcar.</p>
+<p>Así, el origen de la teoría de la probabilidad está en los juegos de azar.</p>
+<p>En 1654, <strong>Chevalier de Méré</strong> comenzó a plantear interrogantes acerca de cómo calcular probabilidades justas en los juegos de azar.</p>
+<p>Luego, entre <strong>Blaise Pascal</strong> y <strong>Pierre de Fermat</strong> comenzaron a analizar y desarrollar la teoría moderna de la probabilidad.</p>
+<p>El famoso <strong>problema de los puntos</strong> dio el punto de partida en como abordar un problema, en el cual está presente el azar. Aquí Pascal y Fermar propucieron distintas vías de resolución y ambas llegaron al mismo resultado.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Problema de los puntos">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Problema de los puntos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Dos jugadores apuestan dinero a un juego de azar (ej. lanzar una moneda) con 5 rondas. El primero que gane 3 rondas se lleva todo el premio. Sin embargo, el juego se interrumpe cuando el Jugador A ha ganado 2 rondas y el Jugador B ha ganado 1. <strong>¿como dividir la apuesta justamente si el juego se detiene antes de finalizar?</strong></p>
+</div>
+</div>
 
 
 </section>
