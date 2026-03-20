@@ -60,3 +60,18 @@ El famoso **problema de los puntos** dio el punto de partida en como abordar un 
 Dos jugadores apuestan dinero a un juego de azar (ej. lanzar una moneda) con
 5 rondas. El primero que gane 3 rondas se lleva todo el premio. Sin embargo, el juego se interrumpe cuando el Jugador A ha ganado 2 rondas y el Jugador B ha ganado 1. **¿como dividir la apuesta justamente si el juego se detiene antes de finalizar?**
 :::
+
+En el año 1814, **Laplace** definió el concepto de probabilidad, la cual corresponde a la razón entre **eventos favorable** y el total de **eventos posibles**.
+
+Laplace desarrolló:
+
+- La Teoría de probabilidad inversas o inductivas (Teorema de Bayes)
+- Teorema Central del Límite
+- etc...
+
+## Interpretaciones de la probabilidad. Probabilidades objetivas y subjetivas
+
+- Frecuencias relativas en infinitos experimentos
+- Grados de creencia
+
+## Kolmogorov y los axiomas de probabilidad
