@@ -71,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles/styles.css">
 </head>
@@ -147,6 +176,8 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#teoría-de-la-probabilidad" id="toc-teoría-de-la-probabilidad" class="nav-link active" data-scroll-target="#teoría-de-la-probabilidad"><span class="header-section-number">1.1</span> Teoría de la Probabilidad</a></li>
   <li><a href="#historia-de-la-probabilidad" id="toc-historia-de-la-probabilidad" class="nav-link" data-scroll-target="#historia-de-la-probabilidad"><span class="header-section-number">1.2</span> Historia de la probabilidad</a></li>
+  <li><a href="#interpretaciones-de-la-probabilidad.-probabilidades-objetivas-y-subjetivas" id="toc-interpretaciones-de-la-probabilidad.-probabilidades-objetivas-y-subjetivas" class="nav-link" data-scroll-target="#interpretaciones-de-la-probabilidad.-probabilidades-objetivas-y-subjetivas"><span class="header-section-number">1.3</span> Interpretaciones de la probabilidad. Probabilidades objetivas y subjetivas</a></li>
+  <li><a href="#kolmogorov-y-los-axiomas-de-probabilidad" id="toc-kolmogorov-y-los-axiomas-de-probabilidad" class="nav-link" data-scroll-target="#kolmogorov-y-los-axiomas-de-probabilidad"><span class="header-section-number">1.4</span> Kolmogorov y los axiomas de probabilidad</a></li>
   </ul>
 </nav>
     </div>
@@ -215,10 +246,10 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>Un aspecto muy importante es la elección de la distribución que se utilizará para modelar el fenómeno aleatorio, ya que cada distribución viene acompañada de supuestos que debemos considerar a la hora de modelar el fenómeno.</p>
-<div class="callout callout-style-default callout-important callout-titled" title="Modelos, supuestos y simplificación">
+<div class="callout callout-style-default callout-important no-icon callout-titled" title="Modelos, supuestos y simplificación">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Important</span>Modelos, supuestos y simplificación
@@ -238,10 +269,10 @@ De hecho, la palabra azar proviene del árabe y significa flor, dado que en esa 
 <p>En 1654, <strong>Chevalier de Méré</strong> comenzó a plantear interrogantes acerca de cómo calcular probabilidades justas en los juegos de azar.</p>
 <p>Luego, entre <strong>Blaise Pascal</strong> y <strong>Pierre de Fermat</strong> comenzaron a analizar y desarrollar la teoría moderna de la probabilidad.</p>
 <p>El famoso <strong>problema de los puntos</strong> dio el punto de partida en como abordar un problema, en el cual está presente el azar. Aquí Pascal y Fermar propucieron distintas vías de resolución y ambas llegaron al mismo resultado.</p>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Problema de los puntos">
+<div class="callout callout-style-default callout-tip callout-titled" title="Problema de los puntos">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Tip</span>Problema de los puntos
@@ -251,6 +282,31 @@ De hecho, la palabra azar proviene del árabe y significa flor, dado que en esa 
 <p>Dos jugadores apuestan dinero a un juego de azar (ej. lanzar una moneda) con 5 rondas. El primero que gane 3 rondas se lleva todo el premio. Sin embargo, el juego se interrumpe cuando el Jugador A ha ganado 2 rondas y el Jugador B ha ganado 1. <strong>¿como dividir la apuesta justamente si el juego se detiene antes de finalizar?</strong></p>
 </div>
 </div>
+<p>En el año 1814, <strong>Laplace</strong> definió el concepto de probabilidad, la cual corresponde a la razón entre <strong>eventos favorable</strong> y el total de <strong>eventos posibles</strong>.</p>
+<p>Laplace desarrolló:</p>
+<ul>
+<li>La Teoría de probabilidad inversas o inductivas (Teorema de Bayes)</li>
+<li>Teorema Central del Límite</li>
+<li>etc…</li>
+</ul>
+</section>
+<section id="interpretaciones-de-la-probabilidad.-probabilidades-objetivas-y-subjetivas" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="interpretaciones-de-la-probabilidad.-probabilidades-objetivas-y-subjetivas"><span class="header-section-number">1.3</span> Interpretaciones de la probabilidad. Probabilidades objetivas y subjetivas</h2>
+<ul>
+<li>Frecuencias relativas en infinitos experimentos</li>
+<li>Grados de creencia</li>
+</ul>
+<p>La base del pensamiento bayesiano es definir la probabilidad como un <em>grado de creencia subjetivo</em> sobre un evento. Lo que busca es actualizar estas estas creencias iniciales del fenómeno (<strong>a priori<em>) mediante el uso de nueva evidencia (</em>datos<em>) para obtener una creencia revisada (</em>a posteriori</strong>), convirtiendo a la inferencia en un proceso dinámico y racional.</p>
+<p>En términos un poco mas formales, se combina el conocimiento previo (<span class="math inline">\(P(\Theta)\)</span> o prior) con la verosimilitud de nuevos datos (<span class="math inline">\(P(X \mid \Theta)\)</span>) para generar la distribución posterior (<span class="math inline">\(P(\Theta\mid X)\)</span>).</p>
+<p>En relación a cómo medir grados de creencia, Ramsey en el año 1926 definió probabilidad con un enfoque pragmático:</p>
+<blockquote class="blockquote">
+<p>“Es la cantidad que se está dispuesto a pagar en una apuesta que paga $1”</p>
+</blockquote>
+<p>Además, demostro que para establecer coherencia, las probabilidades asignadas por una misma persona deben cumplir con lo que conocemos hoy en día como <em>Axiomas de probabilidad</em>.</p>
+<p>Un aspecto interesante, en el caso del enfoque frecuentista, es que por ejemplo, si consideramos una moneda con probabilidad 1/2, nunca obtendremos una probabilidad 1/2 si tiramos la moneda una cantidad impar de veces. Esto da cuenta de la naturaleza del fenómeno, dado que en la realidad no puede darse. (Idea de experimento infinito con convergencia de probabilidad de 1/2)</p>
+</section>
+<section id="kolmogorov-y-los-axiomas-de-probabilidad" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="kolmogorov-y-los-axiomas-de-probabilidad"><span class="header-section-number">1.4</span> Kolmogorov y los axiomas de probabilidad</h2>
 
 
 </section>

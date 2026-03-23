@@ -74,7 +74,27 @@
     "href": "clase_1.html#historia-de-la-probabilidad",
     "title": "1  Introducción",
     "section": "1.2 Historia de la probabilidad",
-    "text": "1.2 Historia de la probabilidad\nLos sumerios tenian juegos de azar. Ellos tenian un protodado, el cual consistia en una especie de dado construido a partir de hueso de animal marcado.\nDe hecho, la palabra azar proviene del árabe y significa flor, dado que en esa época tallaban una flor en la cara que deseaban marcar.\nAsí, el origen de la teoría de la probabilidad está en los juegos de azar.\nEn 1654, Chevalier de Méré comenzó a plantear interrogantes acerca de cómo calcular probabilidades justas en los juegos de azar.\nLuego, entre Blaise Pascal y Pierre de Fermat comenzaron a analizar y desarrollar la teoría moderna de la probabilidad.\nEl famoso problema de los puntos dio el punto de partida en como abordar un problema, en el cual está presente el azar. Aquí Pascal y Fermar propucieron distintas vías de resolución y ambas llegaron al mismo resultado.\n\n\n\n\n\n\nTipProblema de los puntos\n\n\n\nDos jugadores apuestan dinero a un juego de azar (ej. lanzar una moneda) con 5 rondas. El primero que gane 3 rondas se lleva todo el premio. Sin embargo, el juego se interrumpe cuando el Jugador A ha ganado 2 rondas y el Jugador B ha ganado 1. ¿como dividir la apuesta justamente si el juego se detiene antes de finalizar?",
+    "text": "1.2 Historia de la probabilidad\nLos sumerios tenian juegos de azar. Ellos tenian un protodado, el cual consistia en una especie de dado construido a partir de hueso de animal marcado.\nDe hecho, la palabra azar proviene del árabe y significa flor, dado que en esa época tallaban una flor en la cara que deseaban marcar.\nAsí, el origen de la teoría de la probabilidad está en los juegos de azar.\nEn 1654, Chevalier de Méré comenzó a plantear interrogantes acerca de cómo calcular probabilidades justas en los juegos de azar.\nLuego, entre Blaise Pascal y Pierre de Fermat comenzaron a analizar y desarrollar la teoría moderna de la probabilidad.\nEl famoso problema de los puntos dio el punto de partida en como abordar un problema, en el cual está presente el azar. Aquí Pascal y Fermar propucieron distintas vías de resolución y ambas llegaron al mismo resultado.\n\n\n\n\n\n\nTipProblema de los puntos\n\n\n\nDos jugadores apuestan dinero a un juego de azar (ej. lanzar una moneda) con 5 rondas. El primero que gane 3 rondas se lleva todo el premio. Sin embargo, el juego se interrumpe cuando el Jugador A ha ganado 2 rondas y el Jugador B ha ganado 1. ¿como dividir la apuesta justamente si el juego se detiene antes de finalizar?\n\n\nEn el año 1814, Laplace definió el concepto de probabilidad, la cual corresponde a la razón entre eventos favorable y el total de eventos posibles.\nLaplace desarrolló:\n\nLa Teoría de probabilidad inversas o inductivas (Teorema de Bayes)\nTeorema Central del Límite\netc…",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción</span>"
+    ]
+  },
+  {
+    "objectID": "clase_1.html#interpretaciones-de-la-probabilidad.-probabilidades-objetivas-y-subjetivas",
+    "href": "clase_1.html#interpretaciones-de-la-probabilidad.-probabilidades-objetivas-y-subjetivas",
+    "title": "1  Introducción",
+    "section": "1.3 Interpretaciones de la probabilidad. Probabilidades objetivas y subjetivas",
+    "text": "1.3 Interpretaciones de la probabilidad. Probabilidades objetivas y subjetivas\n\nFrecuencias relativas en infinitos experimentos\nGrados de creencia\n\nLa base del pensamiento bayesiano es definir la probabilidad como un grado de creencia subjetivo sobre un evento. Lo que busca es actualizar estas estas creencias iniciales del fenómeno (a priori) mediante el uso de nueva evidencia (datos) para obtener una creencia revisada (a posteriori), convirtiendo a la inferencia en un proceso dinámico y racional.\nEn términos un poco mas formales, se combina el conocimiento previo (\\(P(\\Theta)\\) o prior) con la verosimilitud de nuevos datos (\\(P(X \\mid \\Theta)\\)) para generar la distribución posterior (\\(P(\\Theta\\mid X)\\)).\nEn relación a cómo medir grados de creencia, Ramsey en el año 1926 definió probabilidad con un enfoque pragmático:\n\n“Es la cantidad que se está dispuesto a pagar en una apuesta que paga $1”\n\nAdemás, demostro que para establecer coherencia, las probabilidades asignadas por una misma persona deben cumplir con lo que conocemos hoy en día como Axiomas de probabilidad.\nUn aspecto interesante, en el caso del enfoque frecuentista, es que por ejemplo, si consideramos una moneda con probabilidad 1/2, nunca obtendremos una probabilidad 1/2 si tiramos la moneda una cantidad impar de veces. Esto da cuenta de la naturaleza del fenómeno, dado que en la realidad no puede darse. (Idea de experimento infinito con convergencia de probabilidad de 1/2)",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción</span>"
+    ]
+  },
+  {
+    "objectID": "clase_1.html#kolmogorov-y-los-axiomas-de-probabilidad",
+    "href": "clase_1.html#kolmogorov-y-los-axiomas-de-probabilidad",
+    "title": "1  Introducción",
+    "section": "1.4 Kolmogorov y los axiomas de probabilidad",
+    "text": "1.4 Kolmogorov y los axiomas de probabilidad",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción</span>"
     ]
