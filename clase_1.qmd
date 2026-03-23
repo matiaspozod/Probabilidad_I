@@ -74,7 +74,7 @@ Laplace desarrolló:
 - Frecuencias relativas en infinitos experimentos
 - Grados de creencia
 
-La base del pensamiento bayesiano es definir la probabilidad como un *grado de creencia subjetivo* sobre un evento. Lo que busca es actualizar estas estas creencias iniciales del fenómeno (**a priori*) mediante el uso de nueva evidencia (*datos*) para obtener una creencia revisada (*a posteriori**), convirtiendo a la inferencia en un proceso dinámico y racional.
+La base del pensamiento bayesiano es definir la probabilidad como un **grado de creencia subjetivo** sobre un evento. Lo que busca es actualizar estas estas creencias iniciales del fenómeno (***a priori***) mediante el uso de nueva evidencia (***datos***) para obtener una creencia revisada (***a posteriori***), convirtiendo a la inferencia en un proceso dinámico y racional.
 
 En términos un poco mas formales, se combina el conocimiento previo ($P(\Theta)$ o prior) con la verosimilitud de nuevos datos ($P(X \mid \Theta)$) para generar la distribución posterior ($P(\Theta\mid X)$).
 
@@ -83,7 +83,7 @@ En relación a cómo medir grados de creencia, Ramsey en el año 1926 definió p
 > "Es la cantidad que se está dispuesto a pagar en una apuesta
 > que paga $1"
 
-Además, demostro que para establecer coherencia, las probabilidades asignadas por una misma persona deben cumplir con lo que conocemos hoy en día como *Axiomas de probabilidad*.
+Además, demostro que para establecer coherencia, las probabilidades asignadas por una misma persona deben cumplir con lo que conocemos hoy en día como **Axiomas de probabilidad**.
 
 Un aspecto interesante, en el caso del enfoque frecuentista, es que por ejemplo, si consideramos una moneda con probabilidad 1/2, nunca obtendremos una probabilidad 1/2 si tiramos la moneda una cantidad impar de veces. Esto da cuenta de la naturaleza del fenómeno, dado que en la realidad no puede darse. (Idea de experimento infinito con convergencia de probabilidad de 1/2)
 
