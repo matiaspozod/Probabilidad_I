@@ -212,7 +212,7 @@ window.Quarto = {
 
 
 <blockquote class="blockquote">
-<p>Tiempo: 1:28:00</p>
+<p>Tiempo: 2:12:00</p>
 </blockquote>
 <p>La teoría de probabilidad es la base sobre la cual está construida la estadística. Esta nos brinda las herramientas para modelar una población, un experimento o casi cualquier fenómeno aleatorio.</p>
 <blockquote class="blockquote">
@@ -264,7 +264,7 @@ A = \{x \in \mathbb{N} : x \ es \ par \}
 <p><span class="math display">\[
 A \subseteq B \iff ( \forall x)(x \in A \Longrightarrow x \in B
 )
-\]</span> Si <span class="math inline">\(A \subseteq B \ y \ A \neq  B\)</span>, entonces <span class="math inline">\(A\)</span> se llama <strong>sunconjunto propio</strong> de B. También se denota <span class="math inline">\(A\subsetneq B\)</span></p>
+\]</span> Si <span class="math inline">\(A \subseteq B \ y \ A \neq  B\)</span>, entonces <span class="math inline">\(A\)</span> se llama <strong>subconjunto propio</strong> de B. También se denota <span class="math inline">\(A\subsetneq B\)</span></p>
 <p>El <strong>conjunto de partes</strong> (o <strong>conjunto potencia</strong>) de <span class="math inline">\(A\)</span>, denotado por <span class="math inline">\(\mathcal{P}(A)\)</span>, es el conjunto de <strong>todos los subconjuntos posibles</strong> de <span class="math inline">\(A\)</span>, incluyendo el conjunto vacío <span class="math inline">\((\emptyset)\)</span> y el propio conjunto <span class="math inline">\(A\)</span>.</p>
 <p>Si <span class="math inline">\(A\)</span> tiene <span class="math inline">\(n\)</span> elementos, entonces su conjunto de partes tiene <span class="math inline">\(|\mathcal{P}(A)| = 2^n\)</span> elementos. La cantidad de elementos del conjunto de partes se conoce como <strong>cardinalidad</strong>.</p>
 <p>Ejemplo: Si <span class="math inline">\(A = \{ 1, 2 \}\)</span>, entonces:<br>
@@ -277,6 +277,50 @@ A \subseteq B \iff ( \forall x)(x \in A \Longrightarrow x \in B
 <h2 data-number="2.2" class="anchored" data-anchor-id="espacio-muestral-y-evento"><span class="header-section-number">2.2</span> Espacio Muestral y Evento</h2>
 <p>Uno de los principales objetivos de un estadístico es poder extraer conclusiones acerca de una población de <strong>objetos</strong> mediante la realización de un experimento (obtención de una muestra de la población).</p>
 <p>El primer paso es poder identificar los <strong>posibles resultados</strong> de un experimento, que en términos estadísticos se conoce como el <strong>espacio muestral</strong>.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Espacio muestral">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Espacio muestral
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El conjunto <span class="math inline">\(\Omega\)</span> que contiene todos los resultados posibles de un experimento particular se denomina <strong>espacio muestral</strong> de dicho experimento.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Evento">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Evento
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un evento es cualquier subconjunto <span class="math inline">\(A \subseteq \Omega\)</span>, es decir, <span class="math inline">\(A \in \mathcal{P}(\Omega)\)</span>.</p>
+<p>Podemos decir que el evento <span class="math inline">\(A\)</span> ocurre si el resultado del experimento o la muestra, está en el conjunto <span class="math inline">\(A\)</span>.</p>
+</div>
+</div>
+<p>Podemos clasificar espacios muestrales en función del número de elementos que ellos contienen. Así, los espacios muestrales pueden ser <strong>contables (numerables)</strong> o <strong>no-contables (no-numerables)</strong>.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Identificación de un conjunto contable">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Identificación de un conjunto contable
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si los elementos de un espacio muestral pueden establecerse en una correspondencia biunívoca con un subconjunto de los números naturales, el espacio muestral es contable.</p>
+<p>En otras palabras, si a cada elemento de <span class="math inline">\(\Omega\)</span> es posible asignarle un número natural como identificador, el conjunto es contable.</p>
+<p>Obviamente, si un <span class="math inline">\(\Omega\)</span> solo contiene un número finito de elementos, el espacio muestral es contable.</p>
+</div>
+</div>
+<p>Saber si un espacio muestral es contable o no-contable nos servira para entender como se define la forma en que las probabilidades seran asignadas.</p>
 
 
 </section>

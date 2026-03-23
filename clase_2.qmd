@@ -1,6 +1,6 @@
 # Teoría de Conjuntos y Definición de Probabilidad
 
-> Tiempo: 1:28:00 
+> Tiempo: 2:12:00 
 
 La teoría de probabilidad es la base sobre la cual está construida la estadística. Esta nos brinda las herramientas para modelar una población, un experimento o casi cualquier fenómeno aleatorio.  
 
@@ -56,7 +56,7 @@ $$
 A \subseteq B \iff ( \forall x)(x \in A \Longrightarrow x \in B
 )
 $$
-Si $A \subseteq B \ y \ A \neq  B$, entonces $A$ se llama **sunconjunto propio** de B. También se denota $A\subsetneq B$  
+Si $A \subseteq B \ y \ A \neq  B$, entonces $A$ se llama **subconjunto propio** de B. También se denota $A\subsetneq B$  
 
 El **conjunto de partes** (o **conjunto potencia**) de $A$, denotado por $\mathcal{P}(A)$, es el conjunto de **todos los subconjuntos posibles** de $A$, incluyendo el conjunto vacío $(\emptyset)$ y el propio conjunto $A$.  
 
@@ -72,3 +72,25 @@ $$
 Uno de los principales objetivos de un estadístico es poder extraer conclusiones acerca de una población de **objetos** mediante la realización de un experimento (obtención de una muestra de la población).  
 
 El primer paso es poder identificar los **posibles resultados** de un experimento, que en términos estadísticos se conoce como el **espacio muestral**.
+
+:::{.callout-note title="Espacio muestral" icon="false"}
+El conjunto $\Omega$ que contiene todos los resultados posibles de un experimento particular se denomina **espacio muestral** de dicho experimento. 
+:::
+
+:::{.callout-note title="Evento" icon="false"}
+Un evento es cualquier subconjunto $A \subseteq \Omega$, es decir, $A \in \mathcal{P}(\Omega)$.  
+
+Podemos decir que el evento $A$ ocurre si el resultado del experimento o la muestra, está en el conjunto $A$.  
+:::
+
+Podemos clasificar espacios muestrales en función del número de elementos que ellos contienen. Así, los espacios muestrales pueden ser **contables (numerables)** o **no-contables (no-numerables)**.
+
+:::{.callout-tip title="Identificación de un conjunto contable" icon="false"}
+Si los elementos de un espacio muestral pueden establecerse en una correspondencia biunívoca con un subconjunto de los números naturales, el espacio muestral es contable.  
+
+En otras palabras, si a cada elemento de $\Omega$ es posible asignarle un número natural como identificador, el conjunto es contable.  
+
+Obviamente, si un $\Omega$ solo contiene un número finito de elementos, el espacio muestral es contable.
+:::
+
+Saber si un espacio muestral es contable o no-contable nos servira para entender como se define la forma en que las probabilidades seran asignadas.
