@@ -1,8 +1,13 @@
-# Detalles del curso {.unnumbered}
+## Detalles del curso {.unnumbered}
 
 Curso: Probabilidad I  
 Siglas: EPG4101  
 Profesor: Johan Van Der Molen (jvandermolen@uc.cl)  
+
+## Clases
+
+- Clase 1: Introducción (Lunes 16-03-2026)  
+- Clase 2: Teoría de Conjuntos y Definición de Probabilidad (Lunes 16-03-2026)  
 
 ## Bibliografía
 - Mínima:

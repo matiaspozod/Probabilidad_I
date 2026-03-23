@@ -19,16 +19,17 @@ En este primer curso de una secuencia de dos, el estudiantado conoce elementos d
 
 1. Modelo de Probabilidad y Variable Aleatoria.
     1. Conceptos y propiedades basicas. 
-    2. Probabilidad condicional e independencia. Teorema de Bayes. 
-    3. Definicion y tipo de Variables Aleatoria. 
-    4. Funcion de distribucion, funcion de probabilidad y funcion de densidad. 
-    5. Simulacion de variables aleatorias y aplicaciones. 
+    2. Probabilidad condicional e independencia. 
+    3. Teorema de Bayes. 
+    4. Definicion y tipo de Variables Aleatoria. 
+    5. Funcion de distribucion, funcion de probabilidad y funcion de densidad. 
+    6. Simulacion de variables aleatorias y aplicaciones. 
  
 2. Transformaciones y Valor Esperado. 
     1. Distribuciones de funciones de variables aleatorias. 
     2. Valores Esperados. 
     3. Momentos, funciones generadoras y funcion caracteristica. 
-    4. Algunas familias de distribuciones. 
+    4. Familias de distribuciones más utilizadas. 
 
 ## Bibliografía
 

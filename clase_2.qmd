@@ -1,0 +1,74 @@
+# Teoría de Conjuntos y Definición de Probabilidad
+
+> Tiempo: 1:28:00 
+
+La teoría de probabilidad es la base sobre la cual está construida la estadística. Esta nos brinda las herramientas para modelar una población, un experimento o casi cualquier fenómeno aleatorio.  
+
+> Teoría de probabilidad -> Base matemática para modelar un fenómeno aleatorio.  
+
+> Mediante estos modelos, podemos ser capaces de extraer conclusiones (inferencias) acerca de la población, inferencias basadas en la observación de solo una parte del todo (una muestra de la población).  
+
+Dado que la teoría de probabilidad está construida en base a la **teoría de conjuntos**, sera necesario comenzar en ese punto, con la finalidad de definir formalmente lo que llamamos **eventos** y luego poder definir la **medida de probabilidad.**  
+
+## Teoría de Conjuntos
+
+### Conjunto
+
+:::{.callout-note title="Definición de Conjunto"}
+Un conjunto es una colección definida de **objetos**. Los objetos de un conjunto se denominan **elementos**.
+:::
+
+Si un objeto $x$ pertenece al conjunto $A$, se denota:
+
+$$
+x \in A
+$$
+Y si no pertenece, se denota como:
+
+$$
+x \notin A
+$$
+Un par de llaves $\{ \}$, empleado junto con números, palabras o símbolos, puede describir un conjunto. Por ejemplo:  
+
+$$
+A = \{a_1, a_2, ... , a_n\}
+$$
+También puede expresarse un conjunto $A$ por medio de un símbolo que denote una **variable**, en general la letra $x$, la cual representa a cualquier elemento de un conjunto y mediante la **notación por construcción**, donde se emplea una barra vertical $|$ o $:$, la cual siginifica **tales que:**.  
+
+Por ejemplo:
+
+$$
+S = \{x \ | \ x \ es \ un \ número \ natural \ menor \ que \ 6\}
+$$
+Esto se lee así: *El conjunto de todas las x tales que x es un número natural menor que 6.*
+
+Otro ejemplo:
+
+$$
+A = \{x \in \mathbb{N} : x \ es \ par \}
+$$
+
+### Subconjunto y conjunto de partes
+
+Sean $A$ y $B$ conjuntos, si todos los elementos de A están en B, entonces se dice que $A$ es **subconjunto** de $B$, esto se denota como:
+
+$$
+A \subseteq B \iff ( \forall x)(x \in A \Longrightarrow x \in B
+)
+$$
+Si $A \subseteq B \ y \ A \neq  B$, entonces $A$ se llama **sunconjunto propio** de B. También se denota $A\subsetneq B$  
+
+El **conjunto de partes** (o **conjunto potencia**) de $A$, denotado por $\mathcal{P}(A)$, es el conjunto de **todos los subconjuntos posibles** de $A$, incluyendo el conjunto vacío $(\emptyset)$ y el propio conjunto $A$.  
+
+Si $A$ tiene $n$ elementos, entonces su conjunto de partes tiene $|\mathcal{P}(A)| = 2^n$ elementos. La cantidad de elementos del conjunto de partes se conoce como **cardinalidad**.    
+
+Ejemplo: Si $A = \{ 1, 2 \}$, entonces:  
+$$
+\mathcal{P}(A) = \{ \emptyset, \{ 1\}, \{ 2\}, \{ 1,2\} \}
+$$
+
+## Espacio Muestral y Evento
+
+Uno de los principales objetivos de un estadístico es poder extraer conclusiones acerca de una población de **objetos** mediante la realización de un experimento (obtención de una muestra de la población).  
+
+El primer paso es poder identificar los **posibles resultados** de un experimento, que en términos estadísticos se conoce como el **espacio muestral**.

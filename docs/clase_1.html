@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Introducción – Probabilidad I</title>
+<title>1&nbsp; Introducción a la probabilidad – Probabilidad I</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="next">
+<link href="./clase_2.html" rel="next">
 <link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -113,7 +113,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./clase_1.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./clase_1.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción a la probabilidad</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -149,13 +149,19 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./clase_1.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción a la probabilidad</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./clase_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Teoría de Conjuntos y Definición de Probabilidad</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -186,7 +192,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción</span></h1>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción a la probabilidad</span></h1>
 </div>
 
 
@@ -307,6 +313,27 @@ De hecho, la palabra azar proviene del árabe y significa flor, dado que en esa 
 </section>
 <section id="kolmogorov-y-los-axiomas-de-probabilidad" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="kolmogorov-y-los-axiomas-de-probabilidad"><span class="header-section-number">1.4</span> Kolmogorov y los axiomas de probabilidad</h2>
+<p>Hubo varios intentos para <strong>axiomatizar la probabilidad</strong>, hasta que en 1933 <strong>Kolmogorov publicó sus axiomas</strong>, con una orientación más abstracta, y se volvieron el nuevo estándar.</p>
+<p>La axiomatización de la probabilidad permite conformar un cuerpo matemático único, en donde toda interpretación de la probabilidad (frecuentista, bayesiana, etc.) es irrelevantes, ya que los axiomas brindan una consistencia para cualquiera de ellas.</p>
+<p>Es decir, los axiomas de probabilidad de Kolmogorov establecen los fundamentos matemáticos de la probabilidad. Los axiomas son 3:</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Axiomas de Probabilidad de Kolmogorov Smirnov (1933)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Axiomas de Probabilidad de Kolmogorov Smirnov (1933)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong>No negatividad:</strong> La probabilidad de cualquier suceso <span class="math inline">\(A\)</span> es no negativa: <span class="math inline">\(P(A) \geq 0\)</span></p></li>
+<li><p><strong>Certeza:</strong> La probabilidad del espacio muestral (suceso seguro) es 1: <span class="math inline">\(P(S) = 1\)</span></p></li>
+<li><p><strong>Aditividad o <span class="math inline">\(\sigma-aditividad\)</span>:</strong> Para sucesos mutuamente excluyentes, la probabilidad de su unión es la suma de sus probabilidades: <span class="math inline">\(P(A \cup B) = P(A) + P(B)\)</span><br>
+</p></li>
+</ol>
+</div>
+</div>
 
 
 </section>
@@ -719,8 +746,8 @@ De hecho, la palabra azar proviene del árabe y significa flor, dado que en esa 
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./summary.html" class="pagination-link" aria-label="Summary">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./clase_2.html" class="pagination-link" aria-label="Teoría de Conjuntos y Definición de Probabilidad">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Teoría de Conjuntos y Definición de Probabilidad</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

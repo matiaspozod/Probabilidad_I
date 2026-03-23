@@ -1,4 +1,4 @@
-# Introducción
+# Introducción a la probabilidad
 
 Existen distintas problemáticas o situaciones en el análisis de datos, sin embargo, es posible generar preguntas generales para cualquier problema que se presente:
 
@@ -88,3 +88,17 @@ Además, demostro que para establecer coherencia, las probabilidades asignadas p
 Un aspecto interesante, en el caso del enfoque frecuentista, es que por ejemplo, si consideramos una moneda con probabilidad 1/2, nunca obtendremos una probabilidad 1/2 si tiramos la moneda una cantidad impar de veces. Esto da cuenta de la naturaleza del fenómeno, dado que en la realidad no puede darse. (Idea de experimento infinito con convergencia de probabilidad de 1/2)
 
 ## Kolmogorov y los axiomas de probabilidad
+
+Hubo varios intentos para **axiomatizar la probabilidad**, hasta que en 1933 **Kolmogorov publicó sus axiomas**, con una orientación más abstracta, y se volvieron el nuevo estándar.
+
+La axiomatización de la probabilidad permite conformar un cuerpo matemático único, en donde toda interpretación de la probabilidad (frecuentista, bayesiana, etc.) es irrelevantes, ya que los axiomas brindan una consistencia para cualquiera de ellas.
+
+Es decir, los axiomas de probabilidad de Kolmogorov establecen los fundamentos matemáticos de la probabilidad. Los axiomas son 3:
+
+:::{.callout-important title='Axiomas de Probabilidad de Kolmogorov Smirnov (1933)'}
+1. **No negatividad:** La probabilidad de cualquier suceso $A$ es no negativa: $P(A) \geq 0$  
+
+2. **Certeza:** La probabilidad del espacio muestral (suceso seguro) es 1: $P(S) = 1$  
+
+3. **Aditividad o $\sigma-aditividad$:** Para sucesos mutuamente excluyentes, la probabilidad de su unión es la suma de sus probabilidades: $P(A \cup B) = P(A) + P(B)$   
+:::
