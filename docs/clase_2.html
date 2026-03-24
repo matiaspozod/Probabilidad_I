@@ -186,6 +186,8 @@ window.Quarto = {
   <li><a href="#subconjunto-y-conjunto-de-partes" id="toc-subconjunto-y-conjunto-de-partes" class="nav-link" data-scroll-target="#subconjunto-y-conjunto-de-partes"><span class="header-section-number">2.1.2</span> Subconjunto y conjunto de partes</a></li>
   </ul></li>
   <li><a href="#espacio-muestral-y-evento" id="toc-espacio-muestral-y-evento" class="nav-link" data-scroll-target="#espacio-muestral-y-evento"><span class="header-section-number">2.2</span> Espacio Muestral y Evento</a></li>
+  <li><a href="#operaciones-básicas-con-eventos" id="toc-operaciones-básicas-con-eventos" class="nav-link" data-scroll-target="#operaciones-básicas-con-eventos"><span class="header-section-number">2.3</span> Operaciones básicas con eventos</a></li>
+  <li><a href="#identidades-y-leyes-útiles" id="toc-identidades-y-leyes-útiles" class="nav-link" data-scroll-target="#identidades-y-leyes-útiles"><span class="header-section-number">2.4</span> Identidades y leyes útiles</a></li>
   </ul>
 </nav>
     </div>
@@ -266,7 +268,7 @@ A \subseteq B \iff ( \forall x)(x \in A \Longrightarrow x \in B
 )
 \]</span> Si <span class="math inline">\(A \subseteq B \ y \ A \neq  B\)</span>, entonces <span class="math inline">\(A\)</span> se llama <strong>subconjunto propio</strong> de B. También se denota <span class="math inline">\(A\subsetneq B\)</span></p>
 <p>El <strong>conjunto de partes</strong> (o <strong>conjunto potencia</strong>) de <span class="math inline">\(A\)</span>, denotado por <span class="math inline">\(\mathcal{P}(A)\)</span>, es el conjunto de <strong>todos los subconjuntos posibles</strong> de <span class="math inline">\(A\)</span>, incluyendo el conjunto vacío <span class="math inline">\((\emptyset)\)</span> y el propio conjunto <span class="math inline">\(A\)</span>.</p>
-<p>Si <span class="math inline">\(A\)</span> tiene <span class="math inline">\(n\)</span> elementos, entonces su conjunto de partes tiene <span class="math inline">\(|\mathcal{P}(A)| = 2^n\)</span> elementos. La cantidad de elementos del conjunto de partes se conoce como <strong>cardinalidad</strong>.</p>
+<p>Si <span class="math inline">\(A\)</span> tiene <span class="math inline">\(n\)</span> elementos, entonces su conjunto de partes tiene <span class="math inline">\(|\mathcal{P}(A)| = 2^n\)</span> elementos. La cantidad de elementos del conjunto de partes se conoce como <strong>cardinalidad (#)</strong>.</p>
 <p>Ejemplo: Si <span class="math inline">\(A = \{ 1, 2 \}\)</span>, entonces:<br>
 <span class="math display">\[
 \mathcal{P}(A) = \{ \emptyset, \{ 1\}, \{ 2\}, \{ 1,2\} \}
@@ -321,6 +323,92 @@ A \subseteq B \iff ( \forall x)(x \in A \Longrightarrow x \in B
 </div>
 </div>
 <p>Saber si un espacio muestral es contable o no-contable nos servira para entender como se define la forma en que las probabilidades seran asignadas.</p>
+<p>Hasta la actualidad, no es posible medir con precisión infinita una cantidad física (Por ejemplo, el tiempo), por lo tanto, la mayor parte del tiempo estamos trabajando con espacios muestrales contables.</p>
+<p>Ocurre también que los cálculos para situaciones con mucha precisión, es mejor considerarlo como un comportamiento continuo, mas que un conjunto finito, dado que son muchos los valores que habria que considerar.</p>
+</section>
+<section id="operaciones-básicas-con-eventos" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="operaciones-básicas-con-eventos"><span class="header-section-number">2.3</span> Operaciones básicas con eventos</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Igualdad">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Igualdad
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Dados dos eventos <span class="math inline">\(A, B:\)</span> <span class="math display">\[
+A = B \iff A \subseteq B \ \land B \subseteq A
+\]</span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Unión">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Unión
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La unión de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>, que se escribe <span class="math inline">\(A \cup B\)</span>, es el conjunto de elementos que pertenecen a <span class="math inline">\(A\)</span>, o a <span class="math inline">\(B\)</span>, o a ambos. <span class="math display">\[
+A \cup B = \{\omega \in \Omega : \omega \in A \ \lor \omega \in B \}
+\]</span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Intersección">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Intersección
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La intersección de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>, que se escribe <span class="math inline">\(A \cap B\)</span>, es el conjunto de elementos que pertenecen tanto a <span class="math inline">\(A\)</span> como a <span class="math inline">\(B\)</span>:</p>
+<p><span class="math display">\[
+A \cap B = \{\omega \in \Omega : \omega \in A \ \land \omega \in B \}
+\]</span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Complemento">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Complemento
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El complemento de <span class="math inline">\(A\)</span>, que se escribe <span class="math inline">\(A^c\)</span>, es el conjunto de todos los elementos que no están en <span class="math inline">\(A\)</span>:</p>
+<p><span class="math display">\[
+A^c = \Omega \ \diagdown \ A = \{\omega \in \Omega : \omega \notin A\}
+\]</span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Diferencia">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Diferencia
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La diferencia entre dos conjuntos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> (denotada como <span class="math inline">\(A \ \diagdown \ B\)</span> es el nuevo conjunto formado por todos los elementos que pertenecen al conjunto <span class="math inline">\(A\)</span>, pero <strong>no</strong> pertenecen al conjunto <span class="math inline">\(B\)</span>.</p>
+<p><span class="math display">\[
+A \ \diagdown \ B = A \ \cap B^c
+\]</span></p>
+</div>
+</div>
+</section>
+<section id="identidades-y-leyes-útiles" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="identidades-y-leyes-útiles"><span class="header-section-number">2.4</span> Identidades y leyes útiles</h2>
 
 
 </section>

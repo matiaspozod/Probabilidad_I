@@ -60,7 +60,7 @@ Si $A \subseteq B \ y \ A \neq  B$, entonces $A$ se llama **subconjunto propio**
 
 El **conjunto de partes** (o **conjunto potencia**) de $A$, denotado por $\mathcal{P}(A)$, es el conjunto de **todos los subconjuntos posibles** de $A$, incluyendo el conjunto vacío $(\emptyset)$ y el propio conjunto $A$.  
 
-Si $A$ tiene $n$ elementos, entonces su conjunto de partes tiene $|\mathcal{P}(A)| = 2^n$ elementos. La cantidad de elementos del conjunto de partes se conoce como **cardinalidad**.    
+Si $A$ tiene $n$ elementos, entonces su conjunto de partes tiene $|\mathcal{P}(A)| = 2^n$ elementos. La cantidad de elementos del conjunto de partes se conoce como **cardinalidad (#)**.    
 
 Ejemplo: Si $A = \{ 1, 2 \}$, entonces:  
 $$
@@ -94,3 +94,49 @@ Obviamente, si un $\Omega$ solo contiene un número finito de elementos, el espa
 :::
 
 Saber si un espacio muestral es contable o no-contable nos servira para entender como se define la forma en que las probabilidades seran asignadas.
+
+Hasta la actualidad, no es posible medir con precisión infinita una cantidad física (Por ejemplo, el tiempo), por lo tanto, la mayor parte del tiempo estamos trabajando con espacios muestrales contables.
+
+Ocurre también que los cálculos para situaciones con mucha precisión, es mejor considerarlo como un comportamiento continuo, mas que un conjunto finito, dado que son muchos los valores que habria que considerar.  
+
+## Operaciones básicas con eventos
+
+:::{.callout-note title="Igualdad" icon="false"}
+Dados dos eventos $A, B:$
+$$
+A = B \iff A \subseteq B \ \land B \subseteq A
+$$
+:::
+
+:::{.callout-note title="Unión" icon="false"}
+La unión de $A$ y $B$, que se escribe $A \cup B$, es el conjunto de elementos que pertenecen a $A$, o a $B$, o a ambos.
+$$
+A \cup B = \{\omega \in \Omega : \omega \in A \ \lor \omega \in B \}
+$$
+:::
+
+:::{.callout-note title="Intersección" icon="false"}
+La intersección de $A$ y $B$, que se escribe $A \cap B$, es el conjunto de elementos que pertenecen tanto a $A$ como a $B$:
+
+$$
+A \cap B = \{\omega \in \Omega : \omega \in A \ \land \omega \in B \}
+$$
+:::
+
+:::{.callout-note title="Complemento" icon="false"}
+El complemento de $A$, que se escribe $A^c$, es el conjunto de todos los elementos que no están en $A$:
+
+$$
+A^c = \Omega \ \diagdown \ A = \{\omega \in \Omega : \omega \notin A\}
+$$
+:::
+
+:::{.callout-note title="Diferencia" icon="false"}
+La diferencia entre dos conjuntos $A$ y $B$ (denotada como $A \ \diagdown \ B$ es el nuevo conjunto formado por todos los elementos que pertenecen al conjunto $A$, pero **no** pertenecen al conjunto $B$.
+
+$$
+A \ \diagdown \ B = A \ \cap B^c
+$$
+:::
+
+## Identidades y leyes útiles
