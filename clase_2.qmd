@@ -1,14 +1,13 @@
 # Teoría de Conjuntos y Definición de Probabilidad
 
-> Tiempo: 2:12:00 
-
 La teoría de probabilidad es la base sobre la cual está construida la estadística. Esta nos brinda las herramientas para modelar una población, un experimento o casi cualquier fenómeno aleatorio.  
 
 > Teoría de probabilidad -> Base matemática para modelar un fenómeno aleatorio.  
 
 > Mediante estos modelos, podemos ser capaces de extraer conclusiones (inferencias) acerca de la población, inferencias basadas en la observación de solo una parte del todo (una muestra de la población).  
 
-Dado que la teoría de probabilidad está construida en base a la **teoría de conjuntos**, sera necesario comenzar en ese punto, con la finalidad de definir formalmente lo que llamamos **eventos** y luego poder definir la **medida de probabilidad.**  
+Dado que la teoría de probabilidad está construida en base a la **teoría de conjuntos**, sera necesario comenzar en ese punto, con la finalidad de definir formalmente lo que llamamos **eventos** y luego poder definir la **medida de probabilidad.** 
+
 
 ## Teoría de Conjuntos
 
@@ -17,6 +16,11 @@ Dado que la teoría de probabilidad está construida en base a la **teoría de c
 :::{.callout-note title="Definición de Conjunto"}
 Un conjunto es una colección definida de **objetos**. Los objetos de un conjunto se denominan **elementos**.
 :::
+
+:::{.callout-warning title="La probabilidad viene de los conjuntos" icon=false}
+De hecho, lo que hacemos es calcular un número a un conjunto, donde ese número corresponde a la probabilidad asociada a ese conjunto.
+:::
+
 
 Si un objeto $x$ pertenece al conjunto $A$, se denota:
 
@@ -66,6 +70,7 @@ Ejemplo: Si $A = \{ 1, 2 \}$, entonces:
 $$
 \mathcal{P}(A) = \{ \emptyset, \{ 1\}, \{ 2\}, \{ 1,2\} \}
 $$
+Tambien se lee a $\mathcal{P}()$ como **las partes de**.
 
 ## Espacio Muestral y Evento
 
@@ -93,7 +98,15 @@ En otras palabras, si a cada elemento de $\Omega$ es posible asignarle un númer
 Obviamente, si un $\Omega$ solo contiene un número finito de elementos, el espacio muestral es contable.
 :::
 
-Saber si un espacio muestral es contable o no-contable nos servira para entender como se define la forma en que las probabilidades seran asignadas.
+Esto implica que:  
+$$
+\mathbb{N}, \mathbb{Z} \ y \ \mathbb{Q}, \ son \ \ conjuntos \ contable 
+\\
+\mathbb{R} \ es \ No \ contable
+
+$$
+
+Saber si un espacio muestral es contable o no-contable nos servira para entender como se dictan las maneras en que las probabilidades pueden ser asignadas.
 
 Hasta la actualidad, no es posible medir con precisión infinita una cantidad física (Por ejemplo, el tiempo), por lo tanto, la mayor parte del tiempo estamos trabajando con espacios muestrales contables.
 
@@ -140,3 +153,153 @@ $$
 :::
 
 ## Identidades y leyes útiles
+
+:::{.callout-note title="Leyes de De Morgan" icon=false}
+$$(\cup_iA_i)^c = \cap_iA_i^c$$
+$$(\cap_iA_i)^c=\cup_iA_i^c$$
+:::
+
+:::{.callout-note title="Conmutatividad" icon=false}
+$$A \cup B = B \cup A$$
+$$A \cap B = B \cap A$$
+:::
+
+:::{.callout-note title="Asociatividad" icon=false}
+$$(A \cup B) \cup C = A \cup (B \cup C)$$
+$$(A \cap B) \cap C = A \cap (B \cap C)$$
+:::
+
+:::{.callout-note title="Distributividad" icon=false}
+$$A \cup  (B \cap C) = (A \cup B) \cap (A \cup C)$$
+$$A \cap  (B \cup C) = (A \cap B) \cup (A \cap C)$$
+:::
+
+:::{.callout-note title="Subconjunto de complementos" icon=false}
+Si $A \subseteq B, entonces:$
+$$
+B^c \subseteq A^c
+$$
+:::
+
+## Uniones e Intersecciones infinitas
+
+Las operaciones de unión e intersección se pueden extender a una colección infinita de conjuntos. Si $A_1, A_2, A_3, \ldots$ es una colección de conjuntos, todos definidas en un espacio muestral $S$, entonces existe una notación para una familia indexada $\{A_i\}_{i \in I} \ (índice \ I \ arbitrario):$ 
+
+$$
+\bigcup_{i \in I}A_i = \{ x: \exists i \in I, x \in A_i \}
+$$
+$$
+\bigcap_{i \in I}A_i = \{ x: \forall  i \in I, x \in A_i \}
+$$
+Para el caso contable (**es muy usual**):
+$$
+\bigcup_{n=1}^{\infty} A_n \  \ y \ \ \bigcap_{n=1}^{\infty}A_n
+$$
+También es posible aplicar la propiedad distributiva a una familia infinita, la cual es válida para cualquier índice:  
+$$
+Para \ todo \ conjunto \ B,
+$$
+$$
+B \cap(\bigcup_{i \in I} A_i) = \bigcup_{i \in I}(B \cap A_i) \ , \ \ \ \  B \cup(\bigcap_{i \in I} A_i) = \bigcap_{i \in I}(B \cup A_i)
+$$
+**Las leyes de De Morgan también son válidas para familias arbitrarias.**  
+
+Los ejemplos quedan pendientes, sin embargo para este tipo de situaciones, la mayor parte del tiempo se emplean una familia de intervalos como objetos matemáticos.
+
+## Conjuntos disjuntos
+
+:::{.callout-caution icon=false title="Definición"}
+Dos conjuntos $A$ y $B$ son **mutuamente excluyentes** (o **disjuntos**) si:  
+$$
+A \cap B = \emptyset
+$$
+Equivalente: No existe $x$ tal que $x \in A$ y $x \in B$ simultáneamente.
+:::
+
+Los eventos $A_1, A_2, \ldots$ (*que también se puede expresar como una colección de conjuntos $\{A_i\}_{i \in I}$*) son **disjuntos por pares** si cada par de posibles conjuntos distintos tiene una intersección vacia, lo que significa que no comparten ningún elemento en común.
+
+En notación matemática, los eventos disjuntos por pares se representan como:
+$$
+A_i \cap A_j = \emptyset, \ \forall i \neq j
+$$
+
+## Partición de un conjunto (Partición de $\Omega$ en el caso de considerar al espacio muestral)
+
+A partir del concepto de eventos disjuntos es posible construir el concepto de partición de un conjunto.
+
+:::{.callout-warning icon=false title="Definición de Partición de un conjunto"}
+Una colección $\{A_i\}_{i \in I}$ de subconjuntos de $\omega$ es una **partición** de $\omega$ si se cumplen **tres condiciones:**
+
+1. $A_i = \emptyset, \ \forall i$ (Ningún subconjunto es vacio).
+2. $A_i \cap A_j = \emptyset, \ \forall i \neq j$ (Son subconjuntos disjuntos por pares, mutuamente excluyentes).
+3. $\bigcup_{i \in I}A_i = \Omega$ (La unión de los subconjuntos forma el espacio muestral).
+:::
+
+Siempre es posible hacer una partición, cuando no existe, por medio de partir en secciones más finas. La noción intuitiva seria pensar en un rompecabezas.
+
+:::{.callout-tip title="Ejemplos de particiones en $\mathbb{R}$"}
+Las siguientes familias o colecciones de intervalos son particiones de $\mathbb{R}$:
+$$
+\{(-\infty,0), \{0\}, (0, +\infty)\}
+$$
+$$
+A_i = [i,\  i+1], \ \ i \in \mathbb{Z}
+$$
+:::
+
+## Sigma-álgebra
+El objeto matemático **sigma-álgebra es primordial en la definición de probabilidad**.
+
+:::{.callout-warning icon=false title="Definición de Sigma-álgebra"}
+Sea $\Omega \neq \emptyset$ un espacio muestral. Decimos que $\mathcal{F}$ es una **Sigma-álgebra de partes** de $\Omega$ (es decir, $\mathcal{F}$ es una colección de partes de $\Omega$, **$\mathcal{F}$ es un conjunto de subconjunto de las partes de $\Omega$**, contiene subconjuntos de $\Omega$) si **cumple tres condiciones:**  
+
+1. $\Omega \in \mathcal{F}$ (Contiene al espacio muestral).
+2. $A \in \mathcal{F} \implies A^c \in \mathcal{F}$ (Cerrada para complementos).
+3. $\{A_i\}_{i \in I} \in \mathcal{F} \implies \bigcup_{i = 1}^{\infty}A_i \in \mathcal{F}$ (Cerrada para uniones infinitas numerables/contables).
+
+**Observaciones:**
+
+- $\emptyset$ pertenece a cualquier Sigma-álgebra, dado que el punto 2 indica que el complemento de cualquier conjunto debe estar, en este caso el complemento de $\Omega$ es $\emptyset$
+- Por las leyes de De Morgan, las Sigma-álgebras **también son cerradas para intersecciones numerables**. Esto es por que como las uniones tienen que estar, los complementos tienen que estar, entonces, los complementos de las uniones tambien tienen que estar, es decir, las intersecciones.
+- Para un mismo $\Omega$ pueden existir muchas Sigma-álgebra.
+- $\mathcal{P}(\Omega)$ es siempre una Sigma-álgebra.
+:::
+
+:::{.callout-tip icon=false collapse="true" title="Ejemplos de elección de Sigma-álgebra"}
+- Si $\Omega$ es finito o contable, entonces típicamente escogemos la sigma-álgebra de las partes.
+- Si $\Omega = \mathbb{R}$, entonces escogemos todas las uniones e intersecciones de conjuntos de la forma intervalar: $[a, b], \ (a, b], \ [a, b), \ (a, b])$
+:::
+
+:::{.callout-important title="Sigma-álgebra como base para las probabilidades"}
+> El objetivo de definir una Sigma-álgebra $\mathcal{F}$ de las partes de $\Omega$ es para poder calcular probabilidades. 
+
+- **La Sigma-álgebra va a ser mi conjunto de todos los conjuntos a los que yo les puedo calcular una probabilidad.** 
+- **La Sigma-álgebra contiene a todos los conjuntos a los que yo le voy a calcular la probabilidad.**
+- **Es el conjunto de todos los elementos que me interesa calcular una  probabilidad.**
+- **La Sigma-álgebra es el conjunto de todos los eventos a los cuales quiero calcular la probabilidad.**
+:::
+
+## Axiomas de Probabilidad
+
+:::{.callout-warning title="Definición" icon=false}
+Una medida de probabilidad $P$ en un espacio muestral $\Omega$ es una función definida en una Sigma-álgebra $\mathcal{F} \subseteq \mathcal{P(\Omega)}$ tal que:
+
+1. $P(A) \ge 0, \ \forall A \in \mathcal{F}$
+2. $P(\Omega) = 1$
+3. Si $A_1, A_2,\ldots$ es una secuencia de eventos mutuamente excluyentes en $\mathcal{F}$, entonces, $P(\bigcup_{i = 1}^{\infty}A_i)=\sum_{i=1}^{\infty}P(A_i)$
+
+El trío $( \Omega, \mathcal{F} \ y \ P)$ de objetos matemáticos se denominan **espacio de probabilidad.**
+:::
+
+## Método general para definir probabilidades
+
+Para poder definir una medida de probabilidad a un espacio muestral basta con asignar un valor a cada elemento del espacio muestral, y hay que regirse por los axiomas de probabilidad, es decir, todos deben ser positivos y la suma de todos debe ser 1.
+
+:::{.callout-warning icon=false title="Teorema"}
+Sea $\Omega = \{s_1, \ldots,s_n\}$ un conjunto finito. Sea $\mathcal{F}$ cualquier Sigma-álgebra de partes de $\Omega$. Sea además $p_1, p_2, \ldots, p_n$ números positivos, tal que $\sum_{i=1}^np_i=1$. Para cada $A \in \mathcal{F}$ definimos:
+
+$$
+P(A) = \sum_{i:s_i \in A }p_i
+$$
+Entonces $P$ es una medida de probabilidad. Además, el resultado también es válido para espacios muestrales contables, ya que contable no implica finito.
+:::

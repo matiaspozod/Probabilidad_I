@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="next">
+<link href="./clase_3.html" rel="next">
 <link href="./clase_1.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -160,8 +160,14 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./clase_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cálculo de Probabilidades</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -188,6 +194,12 @@ window.Quarto = {
   <li><a href="#espacio-muestral-y-evento" id="toc-espacio-muestral-y-evento" class="nav-link" data-scroll-target="#espacio-muestral-y-evento"><span class="header-section-number">2.2</span> Espacio Muestral y Evento</a></li>
   <li><a href="#operaciones-básicas-con-eventos" id="toc-operaciones-básicas-con-eventos" class="nav-link" data-scroll-target="#operaciones-básicas-con-eventos"><span class="header-section-number">2.3</span> Operaciones básicas con eventos</a></li>
   <li><a href="#identidades-y-leyes-útiles" id="toc-identidades-y-leyes-útiles" class="nav-link" data-scroll-target="#identidades-y-leyes-útiles"><span class="header-section-number">2.4</span> Identidades y leyes útiles</a></li>
+  <li><a href="#uniones-e-intersecciones-infinitas" id="toc-uniones-e-intersecciones-infinitas" class="nav-link" data-scroll-target="#uniones-e-intersecciones-infinitas"><span class="header-section-number">2.5</span> Uniones e Intersecciones infinitas</a></li>
+  <li><a href="#conjuntos-disjuntos" id="toc-conjuntos-disjuntos" class="nav-link" data-scroll-target="#conjuntos-disjuntos"><span class="header-section-number">2.6</span> Conjuntos disjuntos</a></li>
+  <li><a href="#partición-de-un-conjunto-partición-de-omega-en-el-caso-de-considerar-al-espacio-muestral" id="toc-partición-de-un-conjunto-partición-de-omega-en-el-caso-de-considerar-al-espacio-muestral" class="nav-link" data-scroll-target="#partición-de-un-conjunto-partición-de-omega-en-el-caso-de-considerar-al-espacio-muestral"><span class="header-section-number">2.7</span> Partición de un conjunto (Partición de <span class="math inline">\(\Omega\)</span> en el caso de considerar al espacio muestral)</a></li>
+  <li><a href="#sigma-álgebra" id="toc-sigma-álgebra" class="nav-link" data-scroll-target="#sigma-álgebra"><span class="header-section-number">2.8</span> Sigma-álgebra</a></li>
+  <li><a href="#axiomas-de-probabilidad" id="toc-axiomas-de-probabilidad" class="nav-link" data-scroll-target="#axiomas-de-probabilidad"><span class="header-section-number">2.9</span> Axiomas de Probabilidad</a></li>
+  <li><a href="#método-general-para-definir-probabilidades" id="toc-método-general-para-definir-probabilidades" class="nav-link" data-scroll-target="#método-general-para-definir-probabilidades"><span class="header-section-number">2.10</span> Método general para definir probabilidades</a></li>
   </ul>
 </nav>
     </div>
@@ -213,9 +225,6 @@ window.Quarto = {
 </header>
 
 
-<blockquote class="blockquote">
-<p>Tiempo: 2:12:00</p>
-</blockquote>
 <p>La teoría de probabilidad es la base sobre la cual está construida la estadística. Esta nos brinda las herramientas para modelar una población, un experimento o casi cualquier fenómeno aleatorio.</p>
 <blockquote class="blockquote">
 <p>Teoría de probabilidad -&gt; Base matemática para modelar un fenómeno aleatorio.</p>
@@ -239,6 +248,19 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p>Un conjunto es una colección definida de <strong>objetos</strong>. Los objetos de un conjunto se denominan <strong>elementos</strong>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning no-icon callout-titled" title="La probabilidad viene de los conjuntos">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>La probabilidad viene de los conjuntos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>De hecho, lo que hacemos es calcular un número a un conjunto, donde ese número corresponde a la probabilidad asociada a ese conjunto.</p>
 </div>
 </div>
 <p>Si un objeto <span class="math inline">\(x\)</span> pertenece al conjunto <span class="math inline">\(A\)</span>, se denota:</p>
@@ -272,7 +294,7 @@ A \subseteq B \iff ( \forall x)(x \in A \Longrightarrow x \in B
 <p>Ejemplo: Si <span class="math inline">\(A = \{ 1, 2 \}\)</span>, entonces:<br>
 <span class="math display">\[
 \mathcal{P}(A) = \{ \emptyset, \{ 1\}, \{ 2\}, \{ 1,2\} \}
-\]</span></p>
+\]</span> Tambien se lee a <span class="math inline">\(\mathcal{P}()\)</span> como <strong>las partes de</strong>.</p>
 </section>
 </section>
 <section id="espacio-muestral-y-evento" class="level2" data-number="2.2">
@@ -322,7 +344,10 @@ A \subseteq B \iff ( \forall x)(x \in A \Longrightarrow x \in B
 <p>Obviamente, si un <span class="math inline">\(\Omega\)</span> solo contiene un número finito de elementos, el espacio muestral es contable.</p>
 </div>
 </div>
-<p>Saber si un espacio muestral es contable o no-contable nos servira para entender como se define la forma en que las probabilidades seran asignadas.</p>
+<p>Esto implica que:<br>
+$$ , &nbsp;y &nbsp;, &nbsp;son &nbsp;&nbsp;conjuntos &nbsp;contable \ &nbsp;es &nbsp;No &nbsp;contable</p>
+<p>$$</p>
+<p>Saber si un espacio muestral es contable o no-contable nos servira para entender como se dictan las maneras en que las probabilidades pueden ser asignadas.</p>
 <p>Hasta la actualidad, no es posible medir con precisión infinita una cantidad física (Por ejemplo, el tiempo), por lo tanto, la mayor parte del tiempo estamos trabajando con espacios muestrales contables.</p>
 <p>Ocurre también que los cálculos para situaciones con mucha precisión, es mejor considerarlo como un comportamiento continuo, mas que un conjunto finito, dado que son muchos los valores que habria que considerar.</p>
 </section>
@@ -409,6 +434,264 @@ A \ \diagdown \ B = A \ \cap B^c
 </section>
 <section id="identidades-y-leyes-útiles" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="identidades-y-leyes-útiles"><span class="header-section-number">2.4</span> Identidades y leyes útiles</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Leyes de De Morgan">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Leyes de De Morgan
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[(\cup_iA_i)^c = \cap_iA_i^c\]</span> <span class="math display">\[(\cap_iA_i)^c=\cup_iA_i^c\]</span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Conmutatividad">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Conmutatividad
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[A \cup B = B \cup A\]</span> <span class="math display">\[A \cap B = B \cap A\]</span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Asociatividad">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Asociatividad
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[(A \cup B) \cup C = A \cup (B \cup C)\]</span> <span class="math display">\[(A \cap B) \cap C = A \cap (B \cap C)\]</span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Distributividad">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Distributividad
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[A \cup  (B \cap C) = (A \cup B) \cap (A \cup C)\]</span> <span class="math display">\[A \cap  (B \cup C) = (A \cap B) \cup (A \cap C)\]</span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Subconjunto de complementos">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Subconjunto de complementos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si <span class="math inline">\(A \subseteq B, entonces:\)</span> <span class="math display">\[
+B^c \subseteq A^c
+\]</span></p>
+</div>
+</div>
+</section>
+<section id="uniones-e-intersecciones-infinitas" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="uniones-e-intersecciones-infinitas"><span class="header-section-number">2.5</span> Uniones e Intersecciones infinitas</h2>
+<p>Las operaciones de unión e intersección se pueden extender a una colección infinita de conjuntos. Si <span class="math inline">\(A_1, A_2, A_3, \ldots\)</span> es una colección de conjuntos, todos definidas en un espacio muestral <span class="math inline">\(S\)</span>, entonces existe una notación para una familia indexada <span class="math inline">\(\{A_i\}_{i \in I} \ (índice \ I \ arbitrario):\)</span></p>
+<p><span class="math display">\[
+\bigcup_{i \in I}A_i = \{ x: \exists i \in I, x \in A_i \}
+\]</span> <span class="math display">\[
+\bigcap_{i \in I}A_i = \{ x: \forall  i \in I, x \in A_i \}
+\]</span> Para el caso contable (<strong>es muy usual</strong>): <span class="math display">\[
+\bigcup_{n=1}^{\infty} A_n \  \ y \ \ \bigcap_{n=1}^{\infty}A_n
+\]</span> También es posible aplicar la propiedad distributiva a una familia infinita, la cual es válida para cualquier índice:<br>
+<span class="math display">\[
+Para \ todo \ conjunto \ B,
+\]</span> <span class="math display">\[
+B \cap(\bigcup_{i \in I} A_i) = \bigcup_{i \in I}(B \cap A_i) \ , \ \ \ \  B \cup(\bigcap_{i \in I} A_i) = \bigcap_{i \in I}(B \cup A_i)
+\]</span> <strong>Las leyes de De Morgan también son válidas para familias arbitrarias.</strong></p>
+<p>Los ejemplos quedan pendientes, sin embargo para este tipo de situaciones, la mayor parte del tiempo se emplean una familia de intervalos como objetos matemáticos.</p>
+</section>
+<section id="conjuntos-disjuntos" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="conjuntos-disjuntos"><span class="header-section-number">2.6</span> Conjuntos disjuntos</h2>
+<div class="callout callout-style-default callout-caution no-icon callout-titled" title="Definición">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Definición
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Dos conjuntos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son <strong>mutuamente excluyentes</strong> (o <strong>disjuntos</strong>) si:<br>
+<span class="math display">\[
+A \cap B = \emptyset
+\]</span> Equivalente: No existe <span class="math inline">\(x\)</span> tal que <span class="math inline">\(x \in A\)</span> y <span class="math inline">\(x \in B\)</span> simultáneamente.</p>
+</div>
+</div>
+<p>Los eventos <span class="math inline">\(A_1, A_2, \ldots\)</span> (<em>que también se puede expresar como una colección de conjuntos <span class="math inline">\(\{A_i\}_{i \in I}\)</span></em>) son <strong>disjuntos por pares</strong> si cada par de posibles conjuntos distintos tiene una intersección vacia, lo que significa que no comparten ningún elemento en común.</p>
+<p>En notación matemática, los eventos disjuntos por pares se representan como: <span class="math display">\[
+A_i \cap A_j = \emptyset, \ \forall i \neq j
+\]</span></p>
+</section>
+<section id="partición-de-un-conjunto-partición-de-omega-en-el-caso-de-considerar-al-espacio-muestral" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="partición-de-un-conjunto-partición-de-omega-en-el-caso-de-considerar-al-espacio-muestral"><span class="header-section-number">2.7</span> Partición de un conjunto (Partición de <span class="math inline">\(\Omega\)</span> en el caso de considerar al espacio muestral)</h2>
+<p>A partir del concepto de eventos disjuntos es posible construir el concepto de partición de un conjunto.</p>
+<div class="callout callout-style-default callout-warning no-icon callout-titled" title="Definición de Partición de un conjunto">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Definición de Partición de un conjunto
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Una colección <span class="math inline">\(\{A_i\}_{i \in I}\)</span> de subconjuntos de <span class="math inline">\(\omega\)</span> es una <strong>partición</strong> de <span class="math inline">\(\omega\)</span> si se cumplen <strong>tres condiciones:</strong></p>
+<ol type="1">
+<li><span class="math inline">\(A_i = \emptyset, \ \forall i\)</span> (Ningún subconjunto es vacio).</li>
+<li><span class="math inline">\(A_i \cap A_j = \emptyset, \ \forall i \neq j\)</span> (Son subconjuntos disjuntos por pares, mutuamente excluyentes).</li>
+<li><span class="math inline">\(\bigcup_{i \in I}A_i = \Omega\)</span> (La unión de los subconjuntos forma el espacio muestral).</li>
+</ol>
+</div>
+</div>
+<p>Siempre es posible hacer una partición, cuando no existe, por medio de partir en secciones más finas. La noción intuitiva seria pensar en un rompecabezas.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Ejemplos de particiones en $\mathbb{R}$">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplos de particiones en <span class="math inline">\(\mathbb{R}\)</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Las siguientes familias o colecciones de intervalos son particiones de <span class="math inline">\(\mathbb{R}\)</span>: <span class="math display">\[
+\{(-\infty,0), \{0\}, (0, +\infty)\}
+\]</span> <span class="math display">\[
+A_i = [i,\  i+1], \ \ i \in \mathbb{Z}
+\]</span></p>
+</div>
+</div>
+</section>
+<section id="sigma-álgebra" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="sigma-álgebra"><span class="header-section-number">2.8</span> Sigma-álgebra</h2>
+<p>El objeto matemático <strong>sigma-álgebra es primordial en la definición de probabilidad</strong>.</p>
+<div class="callout callout-style-default callout-warning no-icon callout-titled" title="Definición de Sigma-álgebra">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Definición de Sigma-álgebra
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Sea <span class="math inline">\(\Omega \neq \emptyset\)</span> un espacio muestral. Decimos que <span class="math inline">\(\mathcal{F}\)</span> es una <strong>Sigma-álgebra de partes</strong> de <span class="math inline">\(\Omega\)</span> (es decir, <span class="math inline">\(\mathcal{F}\)</span> es una colección de partes de <span class="math inline">\(\Omega\)</span>, <strong><span class="math inline">\(\mathcal{F}\)</span> es un conjunto de subconjunto de las partes de <span class="math inline">\(\Omega\)</span></strong>, contiene subconjuntos de <span class="math inline">\(\Omega\)</span>) si <strong>cumple tres condiciones:</strong></p>
+<ol type="1">
+<li><span class="math inline">\(\Omega \in \mathcal{F}\)</span> (Contiene al espacio muestral).</li>
+<li><span class="math inline">\(A \in \mathcal{F} \implies A^c \in \mathcal{F}\)</span> (Cerrada para complementos).</li>
+<li><span class="math inline">\(\{A_i\}_{i \in I} \in \mathcal{F} \implies \bigcup_{i = 1}^{\infty}A_i \in \mathcal{F}\)</span> (Cerrada para uniones infinitas numerables/contables).</li>
+</ol>
+<p><strong>Observaciones:</strong></p>
+<ul>
+<li><span class="math inline">\(\emptyset\)</span> pertenece a cualquier Sigma-álgebra, dado que el punto 2 indica que el complemento de cualquier conjunto debe estar, en este caso el complemento de <span class="math inline">\(\Omega\)</span> es <span class="math inline">\(\emptyset\)</span></li>
+<li>Por las leyes de De Morgan, las Sigma-álgebras <strong>también son cerradas para intersecciones numerables</strong>. Esto es por que como las uniones tienen que estar, los complementos tienen que estar, entonces, los complementos de las uniones tambien tienen que estar, es decir, las intersecciones.</li>
+<li>Para un mismo <span class="math inline">\(\Omega\)</span> pueden existir muchas Sigma-álgebra.</li>
+<li><span class="math inline">\(\mathcal{P}(\Omega)\)</span> es siempre una Sigma-álgebra.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Ejemplos de elección de Sigma-álgebra">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplos de elección de Sigma-álgebra
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>Si <span class="math inline">\(\Omega\)</span> es finito o contable, entonces típicamente escogemos la sigma-álgebra de las partes.</li>
+<li>Si <span class="math inline">\(\Omega = \mathbb{R}\)</span>, entonces escogemos todas las uniones e intersecciones de conjuntos de la forma intervalar: <span class="math inline">\([a, b], \ (a, b], \ [a, b), \ (a, b])\)</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled" title="Sigma-álgebra como base para las probabilidades">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Sigma-álgebra como base para las probabilidades
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>El objetivo de definir una Sigma-álgebra <span class="math inline">\(\mathcal{F}\)</span> de las partes de <span class="math inline">\(\Omega\)</span> es para poder calcular probabilidades.</p>
+</blockquote>
+<ul>
+<li><strong>La Sigma-álgebra va a ser mi conjunto de todos los conjuntos a los que yo les puedo calcular una probabilidad.</strong></li>
+<li><strong>La Sigma-álgebra contiene a todos los conjuntos a los que yo le voy a calcular la probabilidad.</strong></li>
+<li><strong>Es el conjunto de todos los elementos que me interesa calcular una probabilidad.</strong></li>
+<li><strong>La Sigma-álgebra es el conjunto de todos los eventos a los cuales quiero calcular la probabilidad.</strong></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="axiomas-de-probabilidad" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="axiomas-de-probabilidad"><span class="header-section-number">2.9</span> Axiomas de Probabilidad</h2>
+<div class="callout callout-style-default callout-warning no-icon callout-titled" title="Definición">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Definición
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Una medida de probabilidad <span class="math inline">\(P\)</span> en un espacio muestral <span class="math inline">\(\Omega\)</span> es una función definida en una Sigma-álgebra <span class="math inline">\(\mathcal{F} \subseteq \mathcal{P(\Omega)}\)</span> tal que:</p>
+<ol type="1">
+<li><span class="math inline">\(P(A) \ge 0, \ \forall A \in \mathcal{F}\)</span></li>
+<li><span class="math inline">\(P(\Omega) = 1\)</span></li>
+<li>Si <span class="math inline">\(A_1, A_2,\ldots\)</span> es una secuencia de eventos mutuamente excluyentes en <span class="math inline">\(\mathcal{F}\)</span>, entonces, <span class="math inline">\(P(\bigcup_{i = 1}^{\infty}A_i)=\sum_{i=1}^{\infty}P(A_i)\)</span></li>
+</ol>
+<p>El trío <span class="math inline">\(( \Omega, \mathcal{F} \ y \ P)\)</span> de objetos matemáticos se denominan <strong>espacio de probabilidad.</strong></p>
+</div>
+</div>
+</section>
+<section id="método-general-para-definir-probabilidades" class="level2" data-number="2.10">
+<h2 data-number="2.10" class="anchored" data-anchor-id="método-general-para-definir-probabilidades"><span class="header-section-number">2.10</span> Método general para definir probabilidades</h2>
+<p>Para poder definir una medida de probabilidad a un espacio muestral basta con asignar un valor a cada elemento del espacio muestral, y hay que regirse por los axiomas de probabilidad, es decir, todos deben ser positivos y la suma de todos debe ser 1.</p>
+<div class="callout callout-style-default callout-warning no-icon callout-titled" title="Teorema">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Teorema
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Sea <span class="math inline">\(\Omega = \{s_1, \ldots,s_n\}\)</span> un conjunto finito. Sea <span class="math inline">\(\mathcal{F}\)</span> cualquier Sigma-álgebra de partes de <span class="math inline">\(\Omega\)</span>. Sea además <span class="math inline">\(p_1, p_2, \ldots, p_n\)</span> números positivos, tal que <span class="math inline">\(\sum_{i=1}^np_i=1\)</span>. Para cada <span class="math inline">\(A \in \mathcal{F}\)</span> definimos:</p>
+<p><span class="math display">\[
+P(A) = \sum_{i:s_i \in A }p_i
+\]</span> Entonces <span class="math inline">\(P\)</span> es una medida de probabilidad. Además, el resultado también es válido para espacios muestrales contables, ya que contable no implica finito.</p>
+</div>
+</div>
 
 
 </section>
@@ -821,8 +1104,8 @@ A \ \diagdown \ B = A \ \cap B^c
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./summary.html" class="pagination-link" aria-label="Summary">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./clase_3.html" class="pagination-link" aria-label="Cálculo de Probabilidades">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cálculo de Probabilidades</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
