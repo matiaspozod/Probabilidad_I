@@ -1,0 +1,9 @@
+# Cálculo de Probabilidades
+
+## Cálculo de probabilidades en el enfoque axiomático
+
+- La probabilidad axiomática no solo define una función $P$, también nos **brinda un conjunto de reglas y propiedades** para calcular probabilidades complejas.
+- El conjunto de reglas se organizan en base a **identidades elementales sobre conjuntos** y de **consecuencias directas de los axiomas.**
+- El objetivo es poder **transformar un sistema de axiomas en una herramienta de cálculo y aproximación.**
+
+## Notación y marco general
