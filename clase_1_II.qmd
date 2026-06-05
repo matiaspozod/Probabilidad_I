@@ -5,3 +5,10 @@ author: "Matías Pozo"
 
 # Introducción
 
+Considerando la infinidad de problemas que se pueden abordar en el contexto del análisis de datos, lo importante a tener siempre en consideración son los siguientes aspectos:
+
+:::{}
+1. Que variables vas a observar
+2. Como vas a relacionar estas variables
+
+:::

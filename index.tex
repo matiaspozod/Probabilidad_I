@@ -107,6 +107,7 @@
 \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 
 \usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -229,7 +230,6 @@
 
 \renewcommand*\contentsname{Table of contents}
 {
-\hypersetup{linkcolor=}
 \setcounter{tocdepth}{2}
 \tableofcontents
 }
@@ -241,9 +241,24 @@
 
 \markboth{Detalles del curso}{Detalles del curso}
 
-Curso: Probabilidad I\\
-Siglas: EPG4101\\
+Curso: Probabilidad I y II Siglas: EPG4101\\
 Profesor: Johan Van Der Molen (jvandermolen@uc.cl)
+
+\section*{Clases}\label{clases}
+\addcontentsline{toc}{section}{Clases}
+
+\markright{Clases}
+
+\begin{itemize}
+\tightlist
+\item
+  Clase 1 (I): Introducción (Lunes 16-03-2026)\\
+\item
+  Clase 2: Teoría de Conjuntos y Definición de Probabilidad (Lunes
+  16-03-2026)
+\item
+  Clase 1 (II): Introducción (Lunes 25-05-2026)
+\end{itemize}
 
 \section*{Bibliografía}\label{bibliografuxeda}
 \addcontentsline{toc}{section}{Bibliografía}
@@ -279,7 +294,8 @@ Profesor: Johan Van Der Molen (jvandermolen@uc.cl)
 
 \bookmarksetup{startatroot}
 
-\chapter{Introducción}\label{introducciuxf3n}
+\chapter{Introducción a la
+probabilidad}\label{introducciuxf3n-a-la-probabilidad}
 
 Existen distintas problemáticas o situaciones en el análisis de datos,
 sin embargo, es posible generar preguntas generales para cualquier
@@ -300,7 +316,7 @@ problema que se presente:
 \item
   ¿Existe una anomalía?
 \item
-  ¿El tratamiento es realmente efectivo
+  ¿El tratamiento es realmente efectivo?
 \end{itemize}
 
 Todas estas preguntas conducen a si existe un real cambio, efecto,
@@ -321,7 +337,8 @@ Para responder necesitamos lo siguiente:
 \begin{itemize}
 \tightlist
 \item
-  Un \textbf{modelo} para describir la variabilidad de los datos.
+  Definir un \textbf{modelo} para describir la variabilidad de los
+  datos.
 \item
   Una manera de \textbf{cuantificar} que los resultados observados son
   plausibles.
@@ -344,30 +361,708 @@ y la ciencia de datos. Con la teoría de la probabilidad es posible:
 \item
   Modelar fenómenos aleatorios
 \item
-  Cuantificar incertidumbre
+  Cuantificar incertidumbre. ¿Que tan seguros estamos de nuestra
+  conclusión?
 \item
   Entender la variabilidad en los datos
 \item
-  Evaluar si un resultado observado es compatible con un modelo
+  \textbf{Evaluar si un resultado observado es compatible con un modelo}
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, leftrule=.75mm, colback=white, opacityback=0, opacitybacktitle=0.6, toptitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, coltitle=black, left=2mm, breakable, toprule=.15mm, titlerule=0mm, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Pensamiento importante}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
 
 Pude darme cuenta que es necesario preguntarse ¿Los grupos son
-comparables? esto conlleva a pensar si la comparación es justa. En este
-sentido, justa se refiere a que si es posible afirmar que lo observado
-es solo atribuible al factor estudiado o no a otros factores que podrián
-estar afectando a la variable de interes. Esto da cuenta entonces de la
-necesidad de abordar un problema de manera en que sea posible recabar
-información de variables importantes del problema y que esas variables
-sean homogeneas en los grupos a comparar, esto asegura que la
-comparación es justa, que no se diferencian por otros factores, si no
-que solo existe una diferencia entre ellos solo en la variable o
+comparables? esto conlleva a pensar si la \textbf{comparación es justa}.
+En este sentido, justa se refiere a que si es posible afirmar que lo
+observado es \textbf{atribuible} solo al factor estudiado o no a otros
+factores que podrián estar afectando a la variable de interes. Esto da
+cuenta entonces de la necesidad de abordar un problema de manera en que
+sea posible recabar información de variables importantes del problema y
+que esas variables sean homogeneas en los grupos a comparar, esto
+asegura que la comparación sea justa, que no se diferencien por otros
+factores, y que entre ellos solo exista una diferencia en la variable o
 variables que se busca estudiar y evaluar.
 
 \end{tcolorbox}
 
-fdfdf
+Un aspecto muy importante es la elección de la distribución que se
+utilizará para modelar el fenómeno aleatorio, ya que cada distribución
+viene acompañada de supuestos que debemos considerar a la hora de
+modelar el fenómeno.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title={Modelos, supuestos y simplificación}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Por lo tanto, como estadísticos proponemos un modelo matemático, el cual
+intenta explicar un fenómeno. Dicho modelo siempre sera una
+simplifiación del fenómeno, y cada supuesto expuesto suscribe
+simplificación.
+
+Por otro lado, es importante no caer en la sobresimplificación. Esto se
+evita considerando los factores importantes del fenómeno que explican en
+gran medida su variabilidad.
+
+\end{tcolorbox}
+
+\section{Historia de la probabilidad}\label{historia-de-la-probabilidad}
+
+Los sumerios tenian juegos de \textbf{azar}. Ellos tenian un protodado,
+el cual consistia en una especie de dado construido a partir de hueso de
+animal marcado.\\
+De hecho, la palabra azar proviene del árabe y significa flor, dado que
+en esa época tallaban una flor en la cara que deseaban marcar.
+
+Así, el origen de la teoría de la probabilidad está en los juegos de
+azar.
+
+En 1654, \textbf{Chevalier de Méré} comenzó a plantear interrogantes
+acerca de cómo calcular probabilidades justas en los juegos de azar.
+
+Luego, entre \textbf{Blaise Pascal} y \textbf{Pierre de Fermat}
+comenzaron a analizar y desarrollar la teoría moderna de la
+probabilidad.
+
+El famoso \textbf{problema de los puntos} dio el punto de partida en
+como abordar un problema, en el cual está presente el azar. Aquí Pascal
+y Fermar propucieron distintas vías de resolución y ambas llegaron al
+mismo resultado.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Problema de los puntos}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Dos jugadores apuestan dinero a un juego de azar (ej. lanzar una moneda)
+con 5 rondas. El primero que gane 3 rondas se lleva todo el premio. Sin
+embargo, el juego se interrumpe cuando el Jugador A ha ganado 2 rondas y
+el Jugador B ha ganado 1. \textbf{¿como dividir la apuesta justamente si
+el juego se detiene antes de finalizar?}
+
+\end{tcolorbox}
+
+En el año 1814, \textbf{Laplace} definió el concepto de probabilidad, la
+cual corresponde a la razón entre \textbf{eventos favorable} y el total
+de \textbf{eventos posibles}.
+
+Laplace desarrolló:
+
+\begin{itemize}
+\tightlist
+\item
+  La Teoría de probabilidad inversas o inductivas (Teorema de Bayes)
+\item
+  Teorema Central del Límite
+\item
+  etc\ldots{}
+\end{itemize}
+
+\section{Interpretaciones de la probabilidad. Probabilidades objetivas y
+subjetivas}\label{interpretaciones-de-la-probabilidad.-probabilidades-objetivas-y-subjetivas}
+
+\begin{itemize}
+\tightlist
+\item
+  Frecuencias relativas en infinitos experimentos
+\item
+  Grados de creencia
+\end{itemize}
+
+La base del pensamiento bayesiano es definir la probabilidad como un
+\textbf{grado de creencia subjetivo} sobre un evento. Lo que busca es
+actualizar estas estas creencias iniciales del fenómeno (\textbf{\emph{a
+priori}}) mediante el uso de nueva evidencia (\textbf{\emph{datos}})
+para obtener una creencia revisada (\textbf{\emph{a posteriori}}),
+convirtiendo a la inferencia en un proceso dinámico y racional.
+
+En términos un poco mas formales, se combina el conocimiento previo
+(\(P(\Theta)\) o prior) con la verosimilitud de nuevos datos
+(\(P(X \mid \Theta)\)) para generar la distribución posterior
+(\(P(\Theta\mid X)\)).
+
+En relación a cómo medir grados de creencia, Ramsey en el año 1926
+definió probabilidad con un enfoque pragmático:
+
+\begin{quote}
+``Es la cantidad que se está dispuesto a pagar en una apuesta que paga
+\$1''
+\end{quote}
+
+Además, demostro que para establecer coherencia, las probabilidades
+asignadas por una misma persona deben cumplir con lo que conocemos hoy
+en día como \textbf{Axiomas de probabilidad}.
+
+Un aspecto interesante, en el caso del enfoque frecuentista, es que por
+ejemplo, si consideramos una moneda con probabilidad 1/2, nunca
+obtendremos una probabilidad 1/2 si tiramos la moneda una cantidad impar
+de veces. Esto da cuenta de la naturaleza del fenómeno, dado que en la
+realidad no puede darse. (Idea de experimento infinito con convergencia
+de probabilidad de 1/2)
+
+\section{Kolmogorov y los axiomas de
+probabilidad}\label{kolmogorov-y-los-axiomas-de-probabilidad}
+
+Hubo varios intentos para \textbf{axiomatizar la probabilidad}, hasta
+que en 1933 \textbf{Kolmogorov publicó sus axiomas}, con una orientación
+más abstracta, y se volvieron el nuevo estándar.
+
+La axiomatización de la probabilidad permite conformar un cuerpo
+matemático único, en donde toda interpretación de la probabilidad
+(frecuentista, bayesiana, etc.) es irrelevantes, ya que los axiomas
+brindan una consistencia para cualquiera de ellas.
+
+Es decir, los axiomas de probabilidad de Kolmogorov establecen los
+fundamentos matemáticos de la probabilidad. Los axiomas son 3:
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Axiomas de Probabilidad de Kolmogorov Smirnov (1933)}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{No negatividad:} La probabilidad de cualquier suceso \(A\) es
+  no negativa: \(P(A) \geq 0\)
+\item
+  \textbf{Certeza:} La probabilidad del espacio muestral (suceso seguro)
+  es 1: \(P(S) = 1\)
+\item
+  \textbf{Aditividad o \(\sigma-aditividad\):} Para sucesos mutuamente
+  excluyentes, la probabilidad de su unión es la suma de sus
+  probabilidades: \(P(A \cup B) = P(A) + P(B)\)\\
+\end{enumerate}
+
+\end{tcolorbox}
+
+\bookmarksetup{startatroot}
+
+\chapter{Teoría de Conjuntos y Definición de
+Probabilidad}\label{teoruxeda-de-conjuntos-y-definiciuxf3n-de-probabilidad}
+
+La teoría de probabilidad es la base sobre la cual está construida la
+estadística. Esta nos brinda las herramientas para modelar una
+población, un experimento o casi cualquier fenómeno aleatorio.
+
+\begin{quote}
+Teoría de probabilidad -\textgreater{} Base matemática para modelar un
+fenómeno aleatorio.
+\end{quote}
+
+\begin{quote}
+Mediante estos modelos, podemos ser capaces de extraer conclusiones
+(inferencias) acerca de la población, inferencias basadas en la
+observación de solo una parte del todo (una muestra de la población).
+\end{quote}
+
+Dado que la teoría de probabilidad está construida en base a la
+\textbf{teoría de conjuntos}, sera necesario comenzar en ese punto, con
+la finalidad de definir formalmente lo que llamamos \textbf{eventos} y
+luego poder definir la \textbf{medida de probabilidad.}
+
+\section{Teoría de Conjuntos}\label{teoruxeda-de-conjuntos}
+
+\subsection{Conjunto}\label{conjunto}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Definición de Conjunto}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Un conjunto es una colección definida de \textbf{objetos}. Los objetos
+de un conjunto se denominan \textbf{elementos}.
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-warning-color!10!white, colframe=quarto-callout-warning-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title={La probabilidad viene de los conjuntos}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+De hecho, lo que hacemos es calcular un número a un conjunto, donde ese
+número corresponde a la probabilidad asociada a ese conjunto.
+
+\end{tcolorbox}
+
+Si un objeto \(x\) pertenece al conjunto \(A\), se denota:
+
+\[
+x \in A
+\] Y si no pertenece, se denota como:
+
+\[
+x \notin A
+\] Un par de llaves \(\{ \}\), empleado junto con números, palabras o
+símbolos, puede describir un conjunto. Por ejemplo:
+
+\[
+A = \{a_1, a_2, ... , a_n\}
+\] También puede expresarse un conjunto \(A\) por medio de un símbolo
+que denote una \textbf{variable}, en general la letra \(x\), la cual
+representa a cualquier elemento de un conjunto y mediante la
+\textbf{notación por construcción}, donde se emplea una barra vertical
+\(|\) o \(:\), la cual siginifica \textbf{tales que:}.
+
+Por ejemplo:
+
+\[
+S = \{x \ | \ x \ es \ un \ número \ natural \ menor \ que \ 6\}
+\] Esto se lee así: \emph{El conjunto de todas las x tales que x es un
+número natural menor que 6.}
+
+Otro ejemplo:
+
+\[
+A = \{x \in \mathbb{N} : x \ es \ par \}
+\]
+
+\subsection{Subconjunto y conjunto de
+partes}\label{subconjunto-y-conjunto-de-partes}
+
+Sean \(A\) y \(B\) conjuntos, si todos los elementos de A están en B,
+entonces se dice que \(A\) es \textbf{subconjunto} de \(B\), esto se
+denota como:
+
+\[
+A \subseteq B \iff ( \forall x)(x \in A \Longrightarrow x \in B
+)
+\] Si \(A \subseteq B \ y \ A \neq  B\), entonces \(A\) se llama
+\textbf{subconjunto propio} de B. También se denota \(A\subsetneq B\)
+
+El \textbf{conjunto de partes} (o \textbf{conjunto potencia}) de \(A\),
+denotado por \(\mathcal{P}(A)\), es el conjunto de \textbf{todos los
+subconjuntos posibles} de \(A\), incluyendo el conjunto vacío
+\((\emptyset)\) y el propio conjunto \(A\).
+
+Si \(A\) tiene \(n\) elementos, entonces su conjunto de partes tiene
+\(|\mathcal{P}(A)| = 2^n\) elementos. La cantidad de elementos del
+conjunto de partes se conoce como \textbf{cardinalidad (\#)}.
+
+Ejemplo: Si \(A = \{ 1, 2 \}\), entonces:\\
+\[
+\mathcal{P}(A) = \{ \emptyset, \{ 1\}, \{ 2\}, \{ 1,2\} \}
+\] Tambien se lee a \(\mathcal{P}()\) como \textbf{las partes de}.
+
+\section{Espacio Muestral y Evento}\label{espacio-muestral-y-evento}
+
+Uno de los principales objetivos de un estadístico es poder extraer
+conclusiones acerca de una población de \textbf{objetos} mediante la
+realización de un experimento (obtención de una muestra de la
+población).
+
+El primer paso es poder identificar los \textbf{posibles resultados} de
+un experimento, que en términos estadísticos se conoce como el
+\textbf{espacio muestral}.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title={Espacio muestral}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+El conjunto \(\Omega\) que contiene todos los resultados posibles de un
+experimento particular se denomina \textbf{espacio muestral} de dicho
+experimento.
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title={Evento}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Un evento es cualquier subconjunto \(A \subseteq \Omega\), es decir,
+\(A \in \mathcal{P}(\Omega)\).
+
+Podemos decir que el evento \(A\) ocurre si el resultado del experimento
+o la muestra, está en el conjunto \(A\).
+
+\end{tcolorbox}
+
+Podemos clasificar espacios muestrales en función del número de
+elementos que ellos contienen. Así, los espacios muestrales pueden ser
+\textbf{contables (numerables)} o \textbf{no-contables (no-numerables)}.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title={Identificación de un conjunto contable}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Si los elementos de un espacio muestral pueden establecerse en una
+correspondencia biunívoca con un subconjunto de los números naturales,
+el espacio muestral es contable.
+
+En otras palabras, si a cada elemento de \(\Omega\) es posible asignarle
+un número natural como identificador, el conjunto es contable.
+
+Obviamente, si un \(\Omega\) solo contiene un número finito de
+elementos, el espacio muestral es contable.
+
+\end{tcolorbox}
+
+Esto implica que:\\
+\$\$ \mathbb{N}, \mathbb{Z} ~y ~\mathbb{Q}, ~son ~~conjuntos ~contable
+\textbackslash{} \mathbb{R} ~es ~No ~contable
+
+\$\$
+
+Saber si un espacio muestral es contable o no-contable nos servira para
+entender como se dictan las maneras en que las probabilidades pueden ser
+asignadas.
+
+Hasta la actualidad, no es posible medir con precisión infinita una
+cantidad física (Por ejemplo, el tiempo), por lo tanto, la mayor parte
+del tiempo estamos trabajando con espacios muestrales contables.
+
+Ocurre también que los cálculos para situaciones con mucha precisión, es
+mejor considerarlo como un comportamiento continuo, mas que un conjunto
+finito, dado que son muchos los valores que habria que considerar.
+
+\section{Operaciones básicas con
+eventos}\label{operaciones-buxe1sicas-con-eventos}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title={Igualdad}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Dados dos eventos \(A, B:\) \[
+A = B \iff A \subseteq B \ \land B \subseteq A
+\]
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title={Unión}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+La unión de \(A\) y \(B\), que se escribe \(A \cup B\), es el conjunto
+de elementos que pertenecen a \(A\), o a \(B\), o a ambos. \[
+A \cup B = \{\omega \in \Omega : \omega \in A \ \lor \omega \in B \}
+\]
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title={Intersección}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+La intersección de \(A\) y \(B\), que se escribe \(A \cap B\), es el
+conjunto de elementos que pertenecen tanto a \(A\) como a \(B\):
+
+\[
+A \cap B = \{\omega \in \Omega : \omega \in A \ \land \omega \in B \}
+\]
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title={Complemento}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+El complemento de \(A\), que se escribe \(A^c\), es el conjunto de todos
+los elementos que no están en \(A\):
+
+\[
+A^c = \Omega \ \diagdown \ A = \{\omega \in \Omega : \omega \notin A\}
+\]
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title={Diferencia}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+La diferencia entre dos conjuntos \(A\) y \(B\) (denotada como
+\(A \ \diagdown \ B\) es el nuevo conjunto formado por todos los
+elementos que pertenecen al conjunto \(A\), pero \textbf{no} pertenecen
+al conjunto \(B\).
+
+\[
+A \ \diagdown \ B = A \ \cap B^c
+\]
+
+\end{tcolorbox}
+
+\section{Identidades y leyes
+útiles}\label{identidades-y-leyes-uxfatiles}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title={Leyes de De Morgan}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\[(\cup_iA_i)^c = \cap_iA_i^c\] \[(\cap_iA_i)^c=\cup_iA_i^c\]
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title={Conmutatividad}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\[A \cup B = B \cup A\] \[A \cap B = B \cap A\]
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title={Asociatividad}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\[(A \cup B) \cup C = A \cup (B \cup C)\]
+\[(A \cap B) \cap C = A \cap (B \cap C)\]
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title={Distributividad}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\[A \cup  (B \cap C) = (A \cup B) \cap (A \cup C)\]
+\[A \cap  (B \cup C) = (A \cap B) \cup (A \cap C)\]
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title={Subconjunto de complementos}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Si \(A \subseteq B, entonces:\) \[
+B^c \subseteq A^c
+\]
+
+\end{tcolorbox}
+
+\section{Uniones e Intersecciones
+infinitas}\label{uniones-e-intersecciones-infinitas}
+
+Las operaciones de unión e intersección se pueden extender a una
+colección infinita de conjuntos. Si \(A_1, A_2, A_3, \ldots\) es una
+colección de conjuntos, todos definidas en un espacio muestral \(S\),
+entonces existe una notación para una familia indexada
+\(\{A_i\}_{i \in I} \ (índice \ I \ arbitrario):\)
+
+\[
+\bigcup_{i \in I}A_i = \{ x: \exists i \in I, x \in A_i \}
+\] \[
+\bigcap_{i \in I}A_i = \{ x: \forall  i \in I, x \in A_i \}
+\] Para el caso contable (\textbf{es muy usual}): \[
+\bigcup_{n=1}^{\infty} A_n \  \ y \ \ \bigcap_{n=1}^{\infty}A_n
+\] También es posible aplicar la propiedad distributiva a una familia
+infinita, la cual es válida para cualquier índice:\\
+\[
+Para \ todo \ conjunto \ B,
+\] \[
+B \cap(\bigcup_{i \in I} A_i) = \bigcup_{i \in I}(B \cap A_i) \ , \ \ \ \  B \cup(\bigcap_{i \in I} A_i) = \bigcap_{i \in I}(B \cup A_i)
+\] \textbf{Las leyes de De Morgan también son válidas para familias
+arbitrarias.}
+
+Los ejemplos quedan pendientes, sin embargo para este tipo de
+situaciones, la mayor parte del tiempo se emplean una familia de
+intervalos como objetos matemáticos.
+
+\section{Conjuntos disjuntos}\label{conjuntos-disjuntos}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-caution-color!10!white, colframe=quarto-callout-caution-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title={Definición}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Dos conjuntos \(A\) y \(B\) son \textbf{mutuamente excluyentes} (o
+\textbf{disjuntos}) si:\\
+\[
+A \cap B = \emptyset
+\] Equivalente: No existe \(x\) tal que \(x \in A\) y \(x \in B\)
+simultáneamente.
+
+\end{tcolorbox}
+
+Los eventos \(A_1, A_2, \ldots\) (\emph{que también se puede expresar
+como una colección de conjuntos \(\{A_i\}_{i \in I}\)}) son
+\textbf{disjuntos por pares} si cada par de posibles conjuntos distintos
+tiene una intersección vacia, lo que significa que no comparten ningún
+elemento en común.
+
+En notación matemática, los eventos disjuntos por pares se representan
+como: \[
+A_i \cap A_j = \emptyset, \ \forall i \neq j
+\]
+
+\section{\texorpdfstring{Partición de un conjunto (Partición de
+\(\Omega\) en el caso de considerar al espacio
+muestral)}{Partición de un conjunto (Partición de \textbackslash Omega en el caso de considerar al espacio muestral)}}\label{particiuxf3n-de-un-conjunto-particiuxf3n-de-omega-en-el-caso-de-considerar-al-espacio-muestral}
+
+A partir del concepto de eventos disjuntos es posible construir el
+concepto de partición de un conjunto.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-warning-color!10!white, colframe=quarto-callout-warning-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title={Definición de Partición de un conjunto}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Una colección \(\{A_i\}_{i \in I}\) de subconjuntos de \(\omega\) es una
+\textbf{partición} de \(\omega\) si se cumplen \textbf{tres
+condiciones:}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(A_i = \emptyset, \ \forall i\) (Ningún subconjunto es vacio).
+\item
+  \(A_i \cap A_j = \emptyset, \ \forall i \neq j\) (Son subconjuntos
+  disjuntos por pares, mutuamente excluyentes).
+\item
+  \(\bigcup_{i \in I}A_i = \Omega\) (La unión de los subconjuntos forma
+  el espacio muestral).
+\end{enumerate}
+
+\end{tcolorbox}
+
+Siempre es posible hacer una partición, cuando no existe, por medio de
+partir en secciones más finas. La noción intuitiva seria pensar en un
+rompecabezas.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Ejemplos de particiones en \(\mathbb{R}\)}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Las siguientes familias o colecciones de intervalos son particiones de
+\(\mathbb{R}\): \[
+\{(-\infty,0), \{0\}, (0, +\infty)\}
+\] \[
+A_i = [i,\  i+1], \ \ i \in \mathbb{Z}
+\]
+
+\end{tcolorbox}
+
+\section{Sigma-álgebra}\label{sigma-uxe1lgebra}
+
+El objeto matemático \textbf{sigma-álgebra es primordial en la
+definición de probabilidad}.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-warning-color!10!white, colframe=quarto-callout-warning-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title={Definición de Sigma-álgebra}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Sea \(\Omega \neq \emptyset\) un espacio muestral. Decimos que
+\(\mathcal{F}\) es una \textbf{Sigma-álgebra de partes} de \(\Omega\)
+(es decir, \(\mathcal{F}\) es una colección de partes de \(\Omega\),
+\textbf{\(\mathcal{F}\) es un conjunto de subconjunto de las partes de
+\(\Omega\)}, contiene subconjuntos de \(\Omega\)) si \textbf{cumple tres
+condiciones:}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\Omega \in \mathcal{F}\) (Contiene al espacio muestral).
+\item
+  \(A \in \mathcal{F} \implies A^c \in \mathcal{F}\) (Cerrada para
+  complementos).
+\item
+  \(\{A_i\}_{i \in I} \in \mathcal{F} \implies \bigcup_{i = 1}^{\infty}A_i \in \mathcal{F}\)
+  (Cerrada para uniones infinitas numerables/contables).
+\end{enumerate}
+
+\textbf{Observaciones:}
+
+\begin{itemize}
+\tightlist
+\item
+  \(\emptyset\) pertenece a cualquier Sigma-álgebra, dado que el punto 2
+  indica que el complemento de cualquier conjunto debe estar, en este
+  caso el complemento de \(\Omega\) es \(\emptyset\)
+\item
+  Por las leyes de De Morgan, las Sigma-álgebras \textbf{también son
+  cerradas para intersecciones numerables}. Esto es por que como las
+  uniones tienen que estar, los complementos tienen que estar, entonces,
+  los complementos de las uniones tambien tienen que estar, es decir,
+  las intersecciones.
+\item
+  Para un mismo \(\Omega\) pueden existir muchas Sigma-álgebra.
+\item
+  \(\mathcal{P}(\Omega)\) es siempre una Sigma-álgebra.
+\end{itemize}
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title={Ejemplos de elección de Sigma-álgebra}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\begin{itemize}
+\tightlist
+\item
+  Si \(\Omega\) es finito o contable, entonces típicamente escogemos la
+  sigma-álgebra de las partes.
+\item
+  Si \(\Omega = \mathbb{R}\), entonces escogemos todas las uniones e
+  intersecciones de conjuntos de la forma intervalar:
+  \([a, b], \ (a, b], \ [a, b), \ (a, b])\)
+\end{itemize}
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Sigma-álgebra como base para las probabilidades}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\begin{quote}
+El objetivo de definir una Sigma-álgebra \(\mathcal{F}\) de las partes
+de \(\Omega\) es para poder calcular probabilidades.
+\end{quote}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{La Sigma-álgebra va a ser mi conjunto de todos los conjuntos a
+  los que yo les puedo calcular una probabilidad.}
+\item
+  \textbf{La Sigma-álgebra contiene a todos los conjuntos a los que yo
+  le voy a calcular la probabilidad.}
+\item
+  \textbf{Es el conjunto de todos los elementos que me interesa calcular
+  una probabilidad.}
+\item
+  \textbf{La Sigma-álgebra es el conjunto de todos los eventos a los
+  cuales quiero calcular la probabilidad.}
+\end{itemize}
+
+\end{tcolorbox}
+
+\section{Axiomas de Probabilidad}\label{axiomas-de-probabilidad}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-warning-color!10!white, colframe=quarto-callout-warning-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title={Definición}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Una medida de probabilidad \(P\) en un espacio muestral \(\Omega\) es
+una función definida en una Sigma-álgebra
+\(\mathcal{F} \subseteq \mathcal{P(\Omega)}\) tal que:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(P(A) \ge 0, \ \forall A \in \mathcal{F}\)
+\item
+  \(P(\Omega) = 1\)
+\item
+  Si \(A_1, A_2,\ldots\) es una secuencia de eventos mutuamente
+  excluyentes en \(\mathcal{F}\), entonces,
+  \(P(\bigcup_{i = 1}^{\infty}A_i)=\sum_{i=1}^{\infty}P(A_i)\)
+\end{enumerate}
+
+El trío \(( \Omega, \mathcal{F} \ y \ P)\) de objetos matemáticos se
+denominan \textbf{espacio de probabilidad.}
+
+\end{tcolorbox}
+
+\section{Método general para definir
+probabilidades}\label{muxe9todo-general-para-definir-probabilidades}
+
+Para poder definir una medida de probabilidad a un espacio muestral
+basta con asignar un valor a cada elemento del espacio muestral, y hay
+que regirse por los axiomas de probabilidad, es decir, todos deben ser
+positivos y la suma de todos debe ser 1.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-warning-color!10!white, colframe=quarto-callout-warning-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title={Teorema}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Sea \(\Omega = \{s_1, \ldots,s_n\}\) un conjunto finito. Sea
+\(\mathcal{F}\) cualquier Sigma-álgebra de partes de \(\Omega\). Sea
+además \(p_1, p_2, \ldots, p_n\) números positivos, tal que
+\(\sum_{i=1}^np_i=1\). Para cada \(A \in \mathcal{F}\) definimos:
+
+\[
+P(A) = \sum_{i:s_i \in A }p_i
+\] Entonces \(P\) es una medida de probabilidad. Además, el resultado
+también es válido para espacios muestrales contables, ya que contable no
+implica finito.
+
+\end{tcolorbox}
+
+\bookmarksetup{startatroot}
+
+\chapter{Cálculo de Probabilidades}\label{cuxe1lculo-de-probabilidades}
+
+\section{Cálculo de probabilidades en el enfoque
+axiomático}\label{cuxe1lculo-de-probabilidades-en-el-enfoque-axiomuxe1tico}
+
+\begin{itemize}
+\tightlist
+\item
+  La probabilidad axiomática no solo define una función \(P\), también
+  nos \textbf{brinda un conjunto de reglas y propiedades} para calcular
+  probabilidades complejas.
+\item
+  El conjunto de reglas se organizan en base a \textbf{identidades
+  elementales sobre conjuntos} y de \textbf{consecuencias directas de
+  los axiomas.}
+\item
+  El objetivo es poder \textbf{transformar un sistema de axiomas en una
+  herramienta de cálculo y aproximación.}
+\end{itemize}
+
+\section{Notación y marco general}\label{notaciuxf3n-y-marco-general}
+
+\bookmarksetup{startatroot}
+
+\chapter{clase\_1\_II}\label{clase_1_ii}
+
+\bookmarksetup{startatroot}
+
+\chapter{Introducción}\label{introducciuxf3n}
+
+Considerando la infinidad de problemas que se pueden abordar en el
+contexto del análisis de datos, lo importante a tener siempre en
+consideración son los siguientes aspectos:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Que variables vas a observar
+\item
+  Como vas a relacionar estas variables
+\end{enumerate}
 
 \bookmarksetup{startatroot}
 
@@ -392,7 +1087,7 @@ In summary, this book has no content whatsoever.
 
 \markboth{References}{References}
 
-\phantomsection\label{refs}
+\protect\phantomsection\label{refs}
 
 
 
